@@ -1,0 +1,317 @@
+.section {
+    position: relative;
+    padding: clamp(80px, 12vw, 120px) 0;
+    overflow: clip;
+    background:
+        radial-gradient(circle at 15% 50%, rgba(87, 0, 123, 0.2), transparent 32%),
+        radial-gradient(circle at 90% 20%, rgba(222, 67, 150, 0.16), transparent 28%),
+        #08060d;
+    color: #fff;
+}
+
+.container {
+    position: relative;
+    width: min(1380px, calc(100% - 48px));
+    min-height: 650px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+    align-items: center;
+    gap: clamp(50px, 8vw, 120px);
+}
+
+.visual {
+    position: relative;
+    min-height: 600px;
+    display: grid;
+    place-items: center;
+    isolation: isolate;
+}
+
+.imageWrap {
+    position: relative;
+    z-index: 3;
+    width: min(100%, 520px);
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+}
+
+.imageWrap::before {
+    content: "";
+    position: absolute;
+    inset: 15%;
+    z-index: -1;
+    border-radius: 50%;
+    background: linear-gradient(135deg,
+            rgba(87, 0, 123, 0.55),
+            rgba(222, 67, 150, 0.25));
+    filter: blur(35px);
+}
+
+.imageWrap img {
+    object-fit: contain;
+}
+
+.orbit {
+    position: absolute;
+    z-index: 1;
+    border: 1px solid rgba(222, 67, 150, 0.22);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.orbitOne {
+    width: 76%;
+    aspect-ratio: 1;
+}
+
+.orbitTwo {
+    width: 92%;
+    aspect-ratio: 0.72;
+    transform: rotate(32deg);
+    border-color: rgba(87, 0, 123, 0.35);
+}
+
+.orbitThree {
+    width: 105%;
+    aspect-ratio: 0.48;
+    transform: rotate(-42deg);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.visualLabel {
+    position: absolute;
+    z-index: 4;
+    right: 8%;
+    bottom: 8%;
+    padding: 12px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 999px;
+    background: rgba(8, 6, 13, 0.58);
+    backdrop-filter: blur(12px);
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+}
+
+.content {
+    max-width: 760px;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #de4396;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+}
+
+.content h2 {
+    max-width: 760px;
+    margin: 0;
+    font-size: clamp(52px, 7.8vw, 74px);
+    line-height: 0.86;
+    font-weight: 800;
+    letter-spacing: -0.075em;
+}
+
+.description {
+    max-width: 650px;
+    margin: 30px 0 42px;
+    color: rgba(255, 255, 255, 0.62);
+    font-size: clamp(17px, 1.5vw, 18px);
+    line-height: 1.6;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: 1px solid rgba(255, 255, 255, 0.13);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.option {
+    min-height: 150px;
+    padding: 25px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+    border-right: 1px solid rgba(255, 255, 255, 0.13);
+    background: rgba(255, 255, 255, 0.018);
+    transition:
+        background 0.35s ease,
+        transform 0.35s ease;
+}
+
+.option:last-child {
+    border-right: 0;
+}
+
+.option img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.option span {
+    font-size: 14px;
+    line-height: 1.25;
+    font-weight: 600;
+}
+
+.optionPrimary {
+    background: linear-gradient(145deg,
+            rgba(87, 0, 123, 0.38),
+            rgba(222, 67, 150, 0.12));
+}
+
+.option:hover {
+    background: rgba(222, 67, 150, 0.12);
+    transform: translateY(-5px);
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 36px;
+    padding: 8px 8px 8px 25px;
+    border-radius: 999px;
+    background: linear-gradient(110deg, #57007b, #de4396);
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 15px 45px rgba(87, 0, 123, 0.28);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.buttonArrow {
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    color: #57007b;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.button:hover {
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 20px 55px rgba(222, 67, 150, 0.25);
+}
+
+.button:hover .buttonArrow {
+    transform: translateX(4px);
+}
+
+[dir="rtl"] .visualLabel {
+    right: auto;
+    left: 8%;
+}
+
+[dir="rtl"] .option {
+    border-right: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+[dir="rtl"] .option:last-child {
+    border-left: 0;
+}
+
+[dir="rtl"] .button {
+    padding: 8px 25px 8px 8px;
+}
+
+[dir="rtl"] .button:hover .buttonArrow {
+    transform: translateX(-4px);
+}
+
+@media (max-width: 900px) {
+    .section {
+        padding: 90px 0;
+    }
+
+    .container {
+        width: min(100% - 32px, 700px);
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .visual {
+        min-height: min(78vw, 540px);
+        order: 1;
+    }
+
+    .content {
+        order: 2;
+    }
+
+    .options {
+        grid-template-columns: 1fr;
+    }
+
+    .option {
+        min-height: 105px;
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .option:last-child {
+        border-bottom: 0;
+    }
+
+    [dir="rtl"] .option {
+        border-left: 0;
+    }
+}
+
+@media (max-width: 520px) {
+    .container {
+        width: min(100% - 28px, 500px);
+    }
+
+    .visual {
+        min-height: 370px;
+    }
+
+    .visualLabel {
+        right: 2%;
+        bottom: 2%;
+    }
+
+    [dir="rtl"] .visualLabel {
+        right: auto;
+        left: 2%;
+    }
+
+    .description {
+        margin: 24px 0 32px;
+        font-size: 16px;
+    }
+
+    .button {
+        margin-top: 28px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .option,
+    .button,
+    .buttonArrow {
+        transition: none;
+    }
+}

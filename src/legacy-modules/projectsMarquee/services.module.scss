@@ -1,0 +1,96 @@
+@use "/src/styles/var" as *;
+
+.black_ribbon {
+    width: 100%;
+    height: auto;
+    direction: ltr;
+
+    .marq {
+        display: flex;
+    }
+
+    .ribbon_text {
+        padding: 20px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        min-width: 100vw;
+        gap: 30px;
+
+        .service {
+            border-left: 10px solid #b12166;
+            padding-left: 30px;
+
+            @media (max-width: $sm) {
+                border-left: 6px solid #b12166;
+            }
+
+            &:nth-child(even) {
+                .ribbon_ltext {
+                    color: #182B54;
+                }
+            }
+
+            &:nth-child(odd) {
+                .ribbon_ltext {
+                    color: #E3E3E3;
+                }
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .ribbon_ltext {
+            font-size: 44px;
+            font-weight: 600;
+            line-height: 34px;
+            margin: 0;
+
+            @media (max-width: $sm) {
+                font-size: 24px;
+                line-height: 14px;
+            }
+        }
+    }
+}
+
+.portfolio {
+    .row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 15px;
+
+        @media (max-width: $md) {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        @media (max-width: $sm) {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+
+        .image {
+            a {
+                display: block;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 8px;
+                    box-shadow: 0 5.55px 41.62px 0 rgba(0, 0, 0, 0.051);
+                    transition: all .35s ease-in-out;
+                    filter: grayscale(1);
+                    border: 1px solid #ddd;
+
+                    &:hover {
+                        filter: grayscale(0);
+                        transform: translateY(-10px);
+                    }
+                }
+            }
+        }
+    }
+}

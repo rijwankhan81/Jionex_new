@@ -1,0 +1,59 @@
+$primary: #57007b;
+$secondary: #de4396;
+$color_three: #d9fbdb;
+$color_four: #f2f6ff;
+$color_five: #fff5e6;
+$font_one: "Poppins", sans-serif;
+
+$xxxl: 1759px;
+$xxl: 1399px;
+$xl: 1199px;
+$lg: 991px;
+$md: 767px;
+$sm: 575px;
+
+
+.btnBlue {
+    background: $primary;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.btnPink {
+    background: $secondary;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.head {
+    width: 100%;
+    max-width: 750px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 40px;
+
+    @media (max-width: $md) {
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        font-size: 44px;
+        font-weight: 900;
+
+        @media (max-width: $md) {
+            font-size: 38px;
+        }
+
+        @media (max-width: $sm) {
+            font-size: 34px;
+        }
+    }
+}

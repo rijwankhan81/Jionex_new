@@ -1,0 +1,962 @@
+.text_blue {
+  color: #000339;
+}
+
+.aboutMain {
+  background: linear-gradient(180deg, #f6f7fd 36.32%, #ffffff 100%);
+}
+
+.fs14D {
+  font-size: 14.81px;
+  font-weight: 400;
+}
+
+.fs32B {
+  font-size: 32.08px;
+  font-weight: 700;
+}
+
+.fs32S {
+  font-size: 32.08px;
+  font-weight: 500;
+}
+
+.fs50 {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.about {
+  background-image: url("/images/abSec1-bg.png");
+  background-position-x: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px 0px;
+}
+
+.about .abflex {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.abflex .abflexHead {
+  text-transform: capitalize;
+  line-height: 100px;
+}
+
+.about .abflexRight {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.abflexRight1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.abflexRight1A {
+  display: flex;
+  flex-direction: column;
+}
+
+.abflexRightA {
+  margin-left: auto;
+}
+
+.abflexRight1A p {
+  color: #aeaeae;
+}
+
+.ddflex {
+  display: flex;
+  flex-direction: row;
+}
+
+.absec2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  position: relative;
+}
+
+.abCenterFlex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.absec2 .abCenter {
+  width: 294px;
+  height: 310px;
+  position: absolute;
+  top: 5%;
+  left: 40%;
+  border-radius: 24.68px;
+  background-color: #fff;
+  box-shadow: -24.68px -18.51px 123.38px 0px #0000000f;
+  box-shadow: 111.04px 92.53px 123.38px 0px #63aac742;
+  padding: 40px 20px 20px 20px;
+}
+
+.abCenterImg2 {
+  padding-top: 20px;
+}
+
+.bordGr {
+  border-bottom: 1.48px solid #e9e9e9;
+  padding-bottom: 20px;
+}
+
+.absec2 img {
+  width: auto;
+}
+
+.absec2 .ab2 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.ab2Scroll i {
+  font-size: 20px;
+  color: #000;
+  padding: 20px 25px;
+  border-radius: 100%;
+  border: 1px solid #000;
+  background-color: transparent;
+}
+
+.ab2Scroll {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.ab2Scroll {
+  text-decoration: none;
+  color: #14161c;
+}
+
+.aboutHead {
+  padding: 20px 0px 50px 0px;
+}
+
+.aboutHeadFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 67px;
+  align-items: center;
+}
+
+.aboutHeadFlex p {
+  color: rgba(20, 22, 28, 0.4);
+}
+
+.mission {
+  background-image: url("/images/mission.png");
+  background-position-x: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 774px;
+}
+
+.mission p {
+  color: #eeeff1;
+  line-height: 32px;
+  padding-top: 20px;
+}
+
+.missionDiv {
+  padding: 90px 120px 0px 90px;
+}
+
+.missionDiv.left {
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.revolt {
+  background-color: #ffffff;
+  border-radius: 40px;
+}
+
+.valueBox img{
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  object-position: left;
+}
+
+.revolFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 70px;
+  padding: 100px;
+}
+
+.revolLeft {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.revolLeft .img1 {
+  height: 94%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.revolLeft .img2 {
+  height: 287px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.revolRight1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.revolRight1.bord {
+  border-bottom: 1px solid rgba(29, 29, 33, 0.4) !important;
+  color: #171717;
+  text-transform: capitalize;
+  padding-bottom: 20px;
+}
+
+.revolRight1.bord1 {
+  padding-top: 20px;
+}
+
+.revolRight1.bord>p {
+  color: rgba(29, 29, 33, 0.4);
+}
+
+.revolRight1A {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.revolRight1A img {
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.revRF {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.revSign {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.values {
+  padding-top: 100px;
+}
+
+.valueHead {
+  max-width: 1191px;
+  margin: auto;
+  text-align: center;
+}
+
+.valueHead div {
+  line-height: 85px;
+  padding-bottom: 30px;
+}
+
+.valueHead p {
+  padding-bottom: 30px;
+}
+
+.valueFlex {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+
+  @media(max-width:1399px) {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+
+  @media(max-width:991px) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+.valueBox {
+  padding: 30px 20px;
+  border: 2px solid transparent;
+}
+
+.valueBox div {
+  padding: 20px 0px;
+}
+
+.valueBox {
+  transition: transform 0.25s ease-in-out;
+}
+
+.valueBox:hover {
+  border: double 2px transparent;
+  background-image: linear-gradient(white, white),
+    linear-gradient(225deg, $secondary 0%, $primary 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border-radius: 30px;
+  transform: scale(1.05);
+}
+
+.quesWrap {
+  padding: 100px;
+  position: relative;
+  margin: 135px 0px 200px 0px;
+}
+
+.quesWrap .quest1 {
+  position: absolute;
+  left: 53%;
+  bottom: -35%;
+}
+
+.quesWrap .quest2 {
+  position: absolute;
+  left: 57%;
+  bottom: -17%;
+  box-shadow: 0px 49px 111px 0px #01135647;
+  width: 600px;
+  height: 687px;
+  border-radius: 49px;
+}
+
+.quesWrap .quesBtnWrap {
+  margin-top: 30px;
+}
+
+.question {
+  background-image: url("/images/question.png");
+  background-position-x: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+  margin-bottom: 200px;
+}
+
+.question .questionHead {
+  text-transform: capitalize;
+}
+
+.team.container {
+  max-width: 1400px;
+  padding-top: 100px;
+}
+
+.teamHead {
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.teamFlex {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.teamFlex .teamBox {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 68.06px 38.89px;
+  border-radius: 25px;
+  background-color: #fff;
+  width: 31.33%;
+  border: 1.5px solid transparent;
+  transition: transform 0.25s ease-in-out;
+}
+
+.teamFlex .teamBox:hover {
+  border: double 1.5px transparent;
+  background-image: linear-gradient(white, white),
+    linear-gradient(225deg, $secondary 0%, $primary 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0px 40px 50px 0px #851d7d1a;
+  transform: scale(1.05);
+}
+
+.teamBox.grey {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 93.37px 29.17px;
+  border-radius: 25px;
+  background: linear-gradient(225deg,
+      rgba(102, 117, 247, 0.1) 0%,
+      rgba(87, 0, 123, 0.1) 100%);
+  text-align: start;
+}
+
+.teamBox img {
+  width: 157.99px;
+  height: 157.99px;
+  display: block;
+  margin: auto;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 150px;
+}
+
+.teamBox .img1 {
+  width: 41.32px;
+  height: 42.53px;
+  display: block;
+  margin-left: 0;
+}
+
+.teamWrapper button {
+  padding: 20px 50px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1750px) {
+  .abflex .abflexHead {
+    line-height: 71px;
+  }
+
+  .fs24B {
+    font-size: 18px;
+  }
+
+  .fs50 {
+    font-size: 38px;
+    font-weight: 700;
+  }
+
+  .fs48N {
+    font-size: 36px;
+  }
+
+  .mission {
+    min-height: 643px;
+  }
+
+  .revolution .revolRightHead {
+    line-height: 60px;
+  }
+
+  .revolFlex {
+    padding: 40px;
+  }
+
+  .valueHead div {
+    line-height: 59px;
+  }
+
+  .quesWrap .quest2 {
+    width: 549px;
+    height: 630px;
+  }
+
+  .quesWrap {
+    margin: 72px 0px 157px 0px;
+  }
+
+  .revolLeft .img2 {
+    height: 245px;
+  }
+
+  .revolLeft .img1 {
+    height: 306px;
+  }
+
+  .team.container {
+    max-width: 1331px;
+    padding-top: 40px;
+  }
+
+  .teamFlex .teamBox {
+    padding: 50.06px 38.89px;
+    width: 30.99%;
+  }
+
+  .abCenterImg2 {
+    padding-top: 20px;
+    width: 90% !important;
+  }
+
+  .absec2 .abCenter {
+    width: 258px;
+    height: 285px;
+    top: 5%;
+    left: 40%;
+  }
+
+  .fs14D {
+    font-size: 12.81px;
+  }
+
+  .fs32B,
+  .fs32S {
+    font-size: 29.08px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .quesWrap {
+    margin: 112px 0px 157px 0px;
+  }
+
+  .valueBox {
+    padding: 30px 40px;
+  }
+
+  .quesWrap .quest2 {
+    width: 425px;
+    height: 498px;
+  }
+
+  .mission {
+    min-height: 584px;
+  }
+
+  .revolution .revolRightHead {
+    line-height: 52px;
+  }
+
+  .fs20B {
+    font-size: 17px;
+  }
+
+  .teamFlex .teamBox {
+    padding: 50.06px 38.89px;
+    width: 30.33%;
+  }
+
+  .team.container {
+    max-width: 1111px;
+    padding-top: 40px;
+  }
+
+  .fs50 {
+    font-size: 31px;
+    font-weight: 700;
+  }
+
+  .quesWrap {
+    padding: 75px;
+  }
+
+  .abCenterImg2 {
+    padding-top: 20px;
+    width: 70% !important;
+  }
+
+  .absec2 .abCenter {
+    width: 244px;
+    height: 249px;
+    top: 5%;
+    left: 40%;
+  }
+
+  .fs32B,
+  .fs32S {
+    font-size: 24.08px;
+  }
+}
+
+@media (max-width: 1399px) {
+  .revolLeft .img1 {
+    height: 220px;
+  }
+
+  .revolLeft .img2 {
+    height: 220px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about {
+    padding: 34px 0px;
+  }
+
+  .abflex .abflexHead {
+    line-height: 55px;
+  }
+
+  #mynavbar li {
+    margin-inline: 4px;
+  }
+
+  .btn_navW {
+    display: none;
+  }
+
+  .fs80 {
+    font-size: 38px;
+  }
+
+  .fs20 {
+    font-size: 15px;
+  }
+
+  .navbar-toggler {
+    margin-right: auto;
+  }
+
+  .quesWrap {
+    padding: 50px;
+  }
+
+  .missionDiv {
+    padding: 50px 50px 0px 50px;
+  }
+
+  .mission {
+    min-height: 425px;
+  }
+
+  .mission p {
+    padding-top: 5px;
+    line-height: 20px;
+  }
+
+  .revolution .revolRightHead {
+    line-height: 40px;
+  }
+
+  .fs24N {
+    font-size: 13px;
+  }
+
+  .fs24 {
+    font-size: 14px;
+  }
+
+  .fs24B {
+    font-size: 14px;
+  }
+
+  .fs48N {
+    font-size: 31px;
+  }
+
+  .fs48 {
+    font-size: 27px;
+  }
+
+  .fs50 {
+    font-size: 21px;
+  }
+
+  .revolFlex {
+    padding: 35px;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .revolRight1.bord {
+    padding-bottom: 5px;
+  }
+
+  .revolRight1.bord1 {
+    padding-top: 4px;
+  }
+
+  .revolLeft .img1 {
+    height: 255px;
+  }
+
+  .revolLeft .img1 {
+    height: 180px;
+    margin: 0;
+  }
+
+  .revolLeft.col-lg-5 {
+    width: 100%;
+  }
+
+  .revolLeft .img2 {
+    height: 180px;
+    margin: 0;
+  }
+
+  .revolLeft .row {
+    row-gap: 20px;
+  }
+
+  .revolRight1A img {
+    vertical-align: super;
+  }
+
+  .valueHead div {
+    padding-bottom: 3px;
+  }
+
+  .valueBox div {
+    padding: 14px 0px;
+  }
+
+  .quesWrap .quest2 {
+    width: 238px;
+    height: 360px;
+    left: 58%;
+    top: -27%;
+  }
+
+  .quesWrap {
+    margin: 31px 0px 100px 0px;
+  }
+
+  .team.container {
+    max-width: 820px;
+    padding-top: 0;
+  }
+
+  .teamFlex .teamBox {
+    padding: 22.06px 13.89px;
+    width: 48.33%;
+  }
+
+  .teamWrapper button {
+    padding: 20px 50px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .about .abflex {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .quesWrap .quest1 {
+    width: 187px;
+  }
+
+  .question {
+    margin-bottom: 141px;
+  }
+
+  .teamFlex {
+    gap: 24px;
+  }
+
+  .abflex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .absec2 .abCenter {
+    width: 212px;
+    height: 199px;
+    top: 5%;
+    left: 38%;
+    padding: 27px 15px 20px 15px;
+  }
+
+  .fs32B,
+  .fs32S {
+    font-size: 21.08px;
+  }
+
+  .fs14D {
+    font-size: 10.81px;
+  }
+
+  .abCenterImg2 {
+    padding-top: 14px;
+    width: 74% !important;
+  }
+
+  .quesWrap .quest1 {
+    position: absolute;
+    left: 53%;
+    bottom: -25%;
+  }
+
+  .quesWrap .quest1 {
+    width: 145px;
+  }
+
+  .valueFlex {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .valueHead div {
+    padding-bottom: 19px;
+    line-height: 42px;
+  }
+}
+
+@media (max-width: 767px) {
+  .quesWrap .quest2 {
+    width: 175px;
+    height: 336px;
+    left: 61%;
+    top: -24%;
+  }
+
+  .values {
+    padding: 57px 0px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .about .abflex {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .teamFlex .teamBox {
+    padding: 21.06px 13.89px;
+    width: 100%;
+    gap: 7px;
+  }
+
+  .valueFlex {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .quesWrap {
+    padding: 21px;
+  }
+
+  .quesWrap .quest1 {
+    position: absolute;
+    left: 53%;
+    bottom: -27%;
+    width: 81px;
+  }
+
+  .quesWrap .quesBtnWrap {
+    margin-top: 14px;
+  }
+
+  .quesWrap .quest2 {
+    width: 146px;
+    height: 205px;
+    left: 58%;
+    bottom: -10%;
+    border-radius: 18px;
+  }
+
+  .fs50 {
+    font-size: 12px;
+  }
+
+  .valueBox {
+    padding: 7px 20px;
+  }
+
+  .values {
+    padding: 50px 10px;
+  }
+
+  .question {
+    margin-bottom: 79px;
+    border-radius: 0;
+  }
+
+  .teamHead {
+    padding-bottom: 17px;
+  }
+
+  .teamFlex {
+    gap: 15px;
+  }
+
+  .contactLeft img {
+    width: 50%;
+  }
+
+  .contactRight {
+    margin-top: 0px;
+  }
+
+  .valueHead div {
+    line-height: 34px;
+  }
+
+  .valueHead div {
+    padding-bottom: 14px;
+  }
+
+  .aboutHeadFlex {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .revolt {
+    border-radius: 0px;
+  }
+
+  .revolFlex {
+    flex-direction: column !important;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .revolLeft .row>* {
+    padding-left: 0;
+  }
+
+  .fs48N {
+    font-size: 25px;
+  }
+
+  .revolution .revolRightHead {
+    line-height: 32px;
+  }
+
+  .fs20B {
+    font-size: 16px;
+  }
+
+  .fs18 {
+    font-size: 10px;
+  }
+
+  .absec2 {
+    flex-direction: column;
+  }
+
+  .absec2 .abCenter {
+    width: 223px;
+    height: 221px;
+    top: 25%;
+    left: 20%;
+  }
+
+  .fs80 {
+    font-size: 33px;
+  }
+
+  .abflex .abflexHead {
+    line-height: 42px;
+  }
+
+  .valueBox img {
+    width: 45px;
+  }
+}

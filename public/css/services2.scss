@@ -1,0 +1,315 @@
+.serviceBanner.Cloud {
+    background-image: url("/images/wordpress1.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.serviceBanner.IOT {
+    background-image: url("/images/iot.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.serviceBanner.PHP {
+    background-image: url("/images/php.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.serviceBanner.Net {
+    background-image: url("/images/dotnet.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.serviceBanner .head {
+    text-align: center;
+    line-height: 110px;
+    padding-bottom: 26px;
+    padding-top: 20px;
+}
+
+.serviceBanner .Heading {
+    padding: 0px 324px;
+    text-align: center;
+    padding: 50px 0;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.webDevIMG {
+    border-radius: 50px !important;
+    width: -webkit-fill-available !important;
+    height: 600px;
+    object-fit: cover;
+}
+
+.serviceSec5 .left.cloud {
+    padding: 237px 50px 80px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+
+
+
+
+.arrow1.webDev {
+    padding: 20px 20px;
+    top: 11%;
+    left: 38.9%;
+}
+
+.expertise p {
+    text-align: center;
+    position: relative;
+    animation: exp 2s linear alternate;
+    padding: 0px 200px;
+}
+
+@media (max-width:1500px) {
+
+
+    .serviceBanner .head {
+        line-height: 82px;
+    }
+
+    .serviceBanner {
+        padding: 30px 0px 55px 0px;
+    }
+
+    .arrow1.webDev {
+        left: 37.9%;
+    }
+
+    .serviceSec2 .IOT {
+        top: -4%;
+        left: 35%;
+    }
+
+    .serviceSec5 .arrow1.IOT {
+        padding: 15px 13px;
+        top: 12%;
+        left: 38.9%;
+    }
+
+}
+
+@media (max-width:1280px) {
+
+
+
+    .webDevIMG {
+        border-radius: 50px !important;
+        width: -webkit-fill-available !important;
+        height: 500px;
+    }
+
+    .break {
+        display: none;
+    }
+
+    .serviceSec5 .left.cloud {
+        padding: 144px 50px 80px 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .arrow1.webDev {
+        left: 36.9%;
+        padding: 15px 15px;
+        top: 13%;
+    }
+
+    .expertise p {
+
+        padding: 0px 30px;
+    }
+
+    .expertise .fs24 {
+        font-size: 15px;
+    }
+}
+
+@media (max-width:1080px) {
+    .serviceBanner .Heading p {
+        font-size: 15px;
+    }
+
+    .serviceBanner .head {
+        line-height: 70px;
+    }
+
+    .serviceBanner .head {
+        padding-top: 0px;
+        padding-top: 15px;
+    }
+
+    .serviceBanner {
+        padding: 30px 0px 20px 0px;
+    }
+
+    .webDevIMG {
+        border-radius: 50px !important;
+        width: -webkit-fill-available !important;
+        height: 450px;
+    }
+
+    .arrow1.webDev {
+        left: 34.9%;
+    }
+}
+
+@media (max-width:767px) {
+    .serviceBanner .Heading p {
+
+        line-height: 28px;
+    }
+
+    .serviceBanner .head {
+        line-height: 53px;
+        padding-top: 0px;
+        padding-bottom: 15px;
+    }
+
+    .serviceBanner .Heading {
+        padding: 35px 0 30px 0;
+    }
+
+
+    .webDevIMG {
+        border-radius: 30px !important;
+        width: -webkit-fill-available !important;
+        height: 350px;
+    }
+
+    .arrow1.webDev {
+        left: 32.9%;
+        padding: 10px 10px;
+        top: 14%;
+    }
+
+    .fs64 {
+        font-size: 25px;
+    }
+
+    p {
+        line-height: 26px;
+    }
+
+    .fs24 {
+        font-size: 14px;
+
+    }
+
+    .serviceSec5 .left.cloud {
+        padding: 107px 50px 50px 50px;
+    }
+
+    .serviceSec2 .IOT {
+        top: -4%;
+        left: 29%;
+    }
+
+    .serviceSec5 .arrow1.IOT {
+        padding: 10px 10px;
+        top: 15%;
+        left: 33.9%;
+    }
+
+    .serviceSec5 .arrow1.PHP {
+        top: 16%;
+        left: 35.2%;
+    }
+
+
+
+
+    .serviceSec5 .arrow1.Net {
+        top: 17%;
+        left: 34.2%;
+    }
+}
+
+@media (max-width:576px) {
+    .serviceBanner .head {
+        line-height: 39px;
+    }
+
+    .serviceBanner .Heading {
+        padding: 25px 0 7px 0;
+    }
+
+    .serviceBanner .Heading p {
+
+        line-height: 22px;
+        font-size: 14px;
+    }
+
+
+    .webDevIMG {
+        border-radius: 18px !important;
+        height: 200px;
+    }
+
+    .serviceSec3 {
+        padding: 53px 15px;
+    }
+
+    .serviceSec5 .arrow1.webDev {
+        left: 71.9% !important;
+        padding: 5px 5px;
+        top: 4%;
+    }
+
+    .expertise p {
+        padding: 0px 0px;
+    }
+
+    .serviceSec5 .arrow1.IOT {
+        padding: 5px 5px;
+        top: 4%;
+        left: 73.9%;
+    }
+
+    .serviceSec2 .IOTBtn {
+        padding: 23px 16px;
+        font-size: 12.86px;
+    }
+
+    .serviceSec2 .IOT {
+        top: -4%;
+        left: 16%;
+    }
+
+    .serviceSec2 .PHPBtn {
+        padding: 23px 21px;
+        font-size: 9.86px;
+    }
+
+
+
+    .serviceSec5 .arrow1.PHP {
+        top: 5%;
+        left: 73.2%;
+    }
+
+
+    .serviceSec2 .NetBtn {
+        font-size: 12px;
+        padding: 23px 15px;
+    }
+
+    .serviceSec5 .arrow1.Net {
+        top: 5%;
+        left: 73.2%;
+    }
+}

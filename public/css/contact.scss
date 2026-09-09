@@ -1,0 +1,478 @@
+.contactBg {
+  background-image: url('/images/contactBanner.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0 74px;
+
+  padding-top: 100px;
+  position: relative;
+}
+
+.Main {
+  background: linear-gradient(180deg, #f6f7fd 36.32%, #ffffff 100%);
+}
+
+.hyperlinks a {
+  margin-inline: 10px;
+  text-decoration: none;
+}
+
+.conBgDown {
+  margin-top: 150px;
+}
+
+.fs100N {
+  font-size: 100px;
+  font-weight: 700;
+}
+
+.conBgDown p {
+  padding-bottom: 80px;
+  color: #fff;
+}
+
+.conBgRight {
+  position: absolute;
+  text-align: end;
+}
+
+.conBgRight .bordR1 {
+  border: 1px solid red;
+  text-align: end;
+  position: absolute;
+  right: 0;
+}
+
+.conBgRight .bordR2 {
+  border: 1px solid red;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.conSection2 {
+  position: relative;
+}
+
+.conSection2 .container {
+  background-image: url('/images/contact2-bg.png');
+  background-position: center center;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.conSection2 .row {
+  align-items: end;
+}
+
+.conSection2 .queryMain {
+  margin-top: -210px;
+}
+
+.contSection2 .talk {
+  background-image: url('/images/talk.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.talk .talkFlex {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.talkFlex p {
+  padding-bottom: 30px;
+}
+
+.talkFlex img {
+  padding: 24.49px 28.5px;
+  border-radius: 20px;
+  background: linear-gradient(225deg, $secondary 0%, $primary 100%);
+  box-shadow: 0px 29px 58px 0px #e50d8f3d;
+  margin-bottom: 30px;
+}
+
+.info {
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  border: 1px solid;
+  border-image-source: linear-gradient(225deg,
+      rgba(102, 117, 247, 0.3) 0%,
+      rgba(87, 0, 123, 0.3) 100%);
+  background: linear-gradient(225deg,
+      rgba(102, 117, 247, 0.07) 0%,
+      rgba(87, 0, 123, 0.07) 100%);
+  border-radius: 25px;
+  overflow: hidden;
+
+  align-items: center;
+}
+
+.info img {
+  border-radius: 12px;
+}
+
+.info.info1 {
+  margin-top: 20px;
+}
+
+.emailFlex,
+.phoneFlex {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.query {
+  padding: 60px;
+  border-radius: 35.68px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: #ffffff;
+}
+
+input,
+textarea {
+  padding: 32px 30px;
+  border: 1.5px solid #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 2.74px 16.47px 0px #02020214;
+  background-color: #f6f7fd;
+  width: 100%;
+}
+
+::placeholder {
+  color: #4e4e4f;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.queryWrapper button {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.query .queryHead {
+  padding-bottom: 40px;
+}
+
+.query .title {
+  padding-bottom: 8px;
+}
+
+.conSection3 {
+  background-image: url('/images/contact3-bg.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 210px 191px;
+  margin: 30px 0px;
+}
+
+.conSection3 .head {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.con3Flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 63px;
+}
+
+.chefFlex {
+  display: flex;
+  flex-direction: column;
+  padding: 35px 30px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow: 20px 35px 70px 0px #0000000a;
+  width: 33.33%;
+}
+
+.con3Address {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: #fff;
+  text-align: center;
+  flex: 1;
+  padding: 60px 80px;
+  border-radius: 30px;
+  transition: all 0.25s ease;
+}
+
+.con3Address img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.con3Address:hover {
+  border: double 1px transparent;
+  background-image: linear-gradient(white, white),
+    linear-gradient(225deg, $secondary 0%, $primary 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border-radius: 30px;
+  box-shadow: 0px 14px 74px 0px #ed609433;
+  background-color: #fff;
+  transform: scale(1.05);
+}
+
+.chef .top {
+  text-align: center;
+}
+
+@media screen and (max-width: 1750px) {
+  .con3Address {
+    padding: 90px 42px;
+  }
+
+  .conBgDown p {
+    line-height: 38px;
+  }
+
+  .query .queryHead {
+    padding-bottom: 17px;
+  }
+
+  .conSection3 {
+    padding: 145px 169px;
+  }
+
+  .fs26 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .con3Address {
+    padding: 70px 15px;
+  }
+
+  .fs40 {
+    font-size: 33px;
+  }
+
+  .talkFlex img {
+    padding: 19.49px 21.5px;
+  }
+
+  .fs100N {
+    font-size: 81px;
+  }
+
+  .fs24N {
+    font-size: 18px;
+  }
+
+  .conBgDown p {
+    line-height: 30px;
+  }
+
+  .info {
+    padding: 22px;
+  }
+
+  input,
+  textarea {
+    padding: 20px 30px;
+  }
+
+  ::placeholder {
+    color: #4e4e4f;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .emailFlex,
+  .phoneFlex {
+    gap: 4px;
+  }
+
+  .fs20N {
+    font-size: 16px;
+  }
+
+  .fs100N {
+    font-size: 70px;
+  }
+
+  .conBgDown p {
+    line-height: 26px;
+  }
+
+  .conSection3 {
+    padding: 86px 82px;
+  }
+
+  .conSection2 .queryMain {
+    margin-top: -173px;
+  }
+
+  .query {
+    padding: 49px;
+  }
+
+  .fs26 {
+    font-size: 17px;
+  }
+
+  .conSection2 {
+    padding-top: 35px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contactBg {
+    padding: 0 23px;
+    padding-top: 30px;
+  }
+
+  .conBgDown p {
+    line-height: 25px;
+    padding-bottom: 21px;
+  }
+
+  .conSection2 .queryMain {
+    margin-top: 40px;
+  }
+
+  .talk .talkFlex {
+    gap: 11px;
+  }
+
+  .con3Flex {
+    gap: 20px;
+  }
+
+  .conSection3 {
+    padding: 39px 30px;
+  }
+
+  .fs34 {
+    font-size: 25px;
+  }
+
+  .info {
+    padding: 13px;
+  }
+
+  .fs24N {
+    font-size: 16px;
+  }
+
+  .fs34 {
+    font-size: 22px;
+  }
+
+  .conBgDown {
+    margin-top: 75px;
+  }
+
+  .fs100N {
+    font-size: 50px;
+  }
+
+  .queryMain .secondInp {
+    margin-top: 20px;
+  }
+
+  .fs26 {
+    font-size: 15px;
+  }
+
+  input,
+  textarea {
+    padding: 20px 18px;
+  }
+
+  .info img {
+    border-radius: 12px;
+    width: 50px;
+  }
+
+  .talkFlex img {
+    margin-bottom: 22px;
+  }
+
+  .serviceBanner3 .Heading p {
+    padding: 0px 160px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .con3Flex {
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .fs100N {
+    font-size: 30px;
+  }
+
+  .fs24N {
+    font-size: 13px;
+  }
+
+  .conBgDown p {
+    line-height: 19px;
+    padding-bottom: 21px;
+  }
+
+  .hyperlinks a {
+    margin-inline: 4px;
+    text-decoration: none;
+  }
+
+  .conBgDown {
+    margin-top: 31px;
+  }
+
+  .query {
+    padding: 18px;
+    border-radius: 10px;
+  }
+
+  .fs40 {
+    font-size: 28px;
+  }
+
+  .conSection3 {
+    padding: 25px 0px 25px;
+  }
+
+  .fs24N {
+    font-size: 13px;
+  }
+
+  .fs24B {
+    font-size: 13px;
+  }
+
+  .info img {
+    border-radius: 12px;
+    width: 50px;
+  }
+
+  .con3Address {
+    width: 100%;
+    margin: auto;
+  }
+
+  .serviceBanner1 {
+    margin-bottom: 15px;
+  }
+
+  .icoSlider img {
+    width: 100%;
+  }
+}
