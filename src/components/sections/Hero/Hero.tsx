@@ -39,10 +39,6 @@ export default function Hero({
 
     if (!root || !visual || !content || !image || !grid) return;
 
-    const reduceMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
-
     const ctx = gsap.context(() => {
       const words = gsap.utils.toArray<HTMLElement>(
         "[data-hero-word]",
@@ -52,15 +48,6 @@ export default function Hero({
         "[data-hero-fade]",
         content,
       );
-
-      if (reduceMotion) {
-        gsap.set([words, elements, image, visual], {
-          clearProps: "all",
-          opacity: 1,
-          visibility: "visible",
-        });
-        return;
-      }
 
       // Make sure nothing can remain hidden if a trigger is delayed.
       gsap.set(words, {
@@ -167,17 +154,6 @@ export default function Hero({
           0,
         )
         .to(
-          content,
-          {
-            yPercent: -22,
-            xPercent: -5,
-            opacity: 0.05,
-            ease: "none",
-            duration: 1,
-          },
-          0,
-        )
-        .to(
           grid,
           {
             opacity: 0.55,
@@ -188,8 +164,24 @@ export default function Hero({
           0,
         );
 
+      // Desktop only: move/fade the hero content during scroll.
+      // Tablet and mobile keep the text/buttons completely stationary.
+      if (window.innerWidth > 1024) {
+        scroll.to(
+          content,
+          {
+            yPercent: -22,
+            xPercent: -5,
+            opacity: 0.05,
+            ease: "none",
+            duration: 1,
+          },
+          0,
+        );
+      }
+
       const onPointerMove = (event: PointerEvent) => {
-        if (window.innerWidth < 900) return;
+        if (window.innerWidth < 1024) return;
 
         const x = event.clientX / window.innerWidth - 0.5;
         const y = event.clientY / window.innerHeight - 0.5;

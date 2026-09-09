@@ -67,6 +67,7 @@ export default function SiteHeader({ locale }: HeaderProps) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [activeId, setActiveId] = useState<string | null>(null);
+  const [languageOpen, setLanguageOpen] = useState(false);
 
   const headerRef = useRef<HTMLElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
@@ -75,6 +76,7 @@ export default function SiteHeader({ locale }: HeaderProps) {
   const detailTitleRef = useRef<HTMLHeadingElement>(null);
   const detailItemsRef = useRef<HTMLAnchorElement[]>([]);
   const timelineRef = useRef<gsap.core.Timeline | null>(null);
+  const languageRef = useRef<HTMLDivElement>(null);
 
   const navTree = navByLocale[locale];
   const localizedPath = pathname?.split("/").slice(2).join("/") || "";
@@ -106,27 +108,65 @@ export default function SiteHeader({ locale }: HeaderProps) {
 
   useEffect(() => {
     const root = document.documentElement;
-
     if (!open) {
       root.style.removeProperty("overflow");
       return;
     }
 
     root.style.overflow = "hidden";
-
     return () => {
       root.style.removeProperty("overflow");
     };
   }, [open]);
 
   useEffect(() => {
+    const savedScroll = sessionStorage.getItem("jionex-language-scroll");
+
+    if (!savedScroll) return;
+
+    sessionStorage.removeItem("jionex-language-scroll");
+
+    const scrollY = Number(savedScroll);
+    if (!Number.isFinite(scrollY)) return;
+
+    const restoreScroll = () => {
+      window.scrollTo({
+        top: scrollY,
+        left: 0,
+        behavior: "auto",
+      });
+    };
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(restoreScroll);
+    });
+  }, []);
+
+  useEffect(() => {
+    const onPointerDown = (event: PointerEvent) => {
+      if (!languageRef.current) return;
+      if (!languageRef.current.contains(event.target as Node)) {
+        setLanguageOpen(false);
+      }
+    };
+
+    document.addEventListener("pointerdown", onPointerDown);
+    return () => {
+      document.removeEventListener("pointerdown", onPointerDown);
+    };
+  }, []);
+
+  useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape" && open) setOpen(false);
+      if (event.key === "Escape") {
+        if (open) setOpen(false);
+        if (languageOpen) setLanguageOpen(false);
+      }
     };
 
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [open]);
+  }, [open, languageOpen]);
 
   useEffect(() => {
     if (!open) return;
@@ -141,11 +181,7 @@ export default function SiteHeader({ locale }: HeaderProps) {
     if (!panelRef.current) return;
 
     timelineRef.current?.kill();
-
-    const tl = gsap.timeline({
-      defaults: { ease: "power4.out" },
-    });
-
+    const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
     timelineRef.current = tl;
 
     if (open) {
@@ -156,37 +192,15 @@ export default function SiteHeader({ locale }: HeaderProps) {
       })
         .to(
           navItemsRef.current,
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.62,
-            stagger: 0.055,
-          },
+          { y: 0, opacity: 1, duration: 0.62, stagger: 0.055 },
           "-=0.34",
         )
-        .to(
-          detailRef.current,
-          {
-            x: 0,
-            opacity: 1,
-            duration: 0.62,
-          },
-          "-=0.46",
-        );
+        .to(detailRef.current, { x: 0, opacity: 1, duration: 0.62 }, "-=0.46");
     } else {
-      tl.to(detailRef.current, {
-        x: 24,
-        opacity: 0,
-        duration: 0.2,
-      })
+      tl.to(detailRef.current, { x: 24, opacity: 0, duration: 0.2 })
         .to(
           navItemsRef.current,
-          {
-            y: 22,
-            opacity: 0,
-            duration: 0.18,
-            stagger: 0.015,
-          },
+          { y: 22, opacity: 0, duration: 0.18, stagger: 0.015 },
           "<",
         )
         .to(panelRef.current, {
@@ -246,17 +260,58 @@ export default function SiteHeader({ locale }: HeaderProps) {
         </Link>
 
         <div className={styles.controls}>
-          <div className={styles.languages} aria-label="Language selector">
-            {locales.map((item) => (
-              <Link
-                key={item}
-                href={`/${item}${localizedPath ? `/${localizedPath}` : ""}`}
-                className={`${styles.language} ${item === locale ? styles.activeLanguage : ""}`}
-                aria-current={item === locale ? "page" : undefined}
-              >
-                <span>{localeMeta[item].nativeLabel}</span>
-              </Link>
-            ))}
+          <div
+            ref={languageRef}
+            className={styles.languages}
+            aria-label="Language selector"
+          >
+            <button
+              type="button"
+              className={styles.languageTrigger}
+              aria-expanded={languageOpen}
+              aria-haspopup="menu"
+              onClick={() => setLanguageOpen((value) => !value)}
+            >
+              <span>{localeMeta[locale].nativeLabel}</span>
+              <ChevronRight
+                className={`${styles.languageChevron} ${languageOpen ? styles.languageChevronOpen : ""}`}
+                size={15}
+                strokeWidth={1.5}
+                aria-hidden="true"
+              />
+            </button>
+
+            <div
+              className={`${styles.languageMenu} ${languageOpen ? styles.languageMenuOpen : ""}`}
+              role="menu"
+              aria-hidden={!languageOpen}
+            >
+              {locales.map((item) => (
+                <Link
+                  key={item}
+                  href={`/${item}${localizedPath ? `/${localizedPath}` : ""}`}
+                  className={`${styles.language} ${item === locale ? styles.activeLanguage : ""}`}
+                  aria-current={item === locale ? "page" : undefined}
+                  role="menuitem"
+                  tabIndex={languageOpen ? 0 : -1}
+                  onClick={() => {
+                    sessionStorage.setItem(
+                      "jionex-language-scroll",
+                      String(window.scrollY),
+                    );
+                    setLanguageOpen(false);
+                    setOpen(false);
+                  }}
+                >
+                  <span>{localeMeta[item].nativeLabel}</span>
+                  {item === locale && (
+                    <span className={styles.languageCheck} aria-hidden="true">
+                      ✓
+                    </span>
+                  )}
+                </Link>
+              ))}
+            </div>
           </div>
 
           <button
@@ -316,7 +371,15 @@ export default function SiteHeader({ locale }: HeaderProps) {
                       className={`${styles.primaryLink} ${selected ? styles.selected : ""}`}
                       onMouseEnter={() => handleMenuItem(item)}
                       onFocus={() => handleMenuItem(item)}
-                      onClick={handleNavClick}
+                      onClick={(event) => {
+                        if (hasChildren(item)) {
+                          event.preventDefault();
+                          setActiveId(item.id);
+                          return;
+                        }
+
+                        handleNavClick();
+                      }}
                     >
                       <span className={styles.index}>
                         {String(index + 1).padStart(2, "0")}

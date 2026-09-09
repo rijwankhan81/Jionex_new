@@ -202,6 +202,10 @@
 }
 
 @media (max-width: 800px) {
+    .section {
+        padding: 90px 0;
+    }
+
     .container {
         width: min(100% - 32px, 620px);
     }
@@ -222,7 +226,7 @@
 
 @media (max-width: 520px) {
     .section {
-        padding-top: 88px;
+        padding: 50px 0;
     }
 
     .container {

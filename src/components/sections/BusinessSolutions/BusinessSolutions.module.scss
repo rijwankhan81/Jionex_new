@@ -240,9 +240,15 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .section {
+        padding: 90px 0;
+    }
+}
+
 @media (max-width: 600px) {
     .section {
-        padding: 85px 0;
+        padding: 7px 0;
     }
 
     .container {

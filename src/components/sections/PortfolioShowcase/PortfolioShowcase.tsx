@@ -139,8 +139,6 @@ export default function PortfolioShowcase({ locale, title, items }: Props) {
 
         <div className={styles.container}>
           <header className={styles.intro}>
-            <span className={styles.index}>04</span>
-
             <div>
               <span className={styles.eyebrow}>JIONEX</span>
               <h2 id="portfolio-title">{title}</h2>

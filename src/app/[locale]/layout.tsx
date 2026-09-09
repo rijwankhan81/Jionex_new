@@ -7,7 +7,7 @@ import { localeMeta, locales, type Locale } from "@/i18n/config";
 
 import SiteShell from "@/components/site/SiteShell";
 import SiteHeader from "@/components/site/SiteHeader";
-import Footer from "@/components/layout/Footer/Footer";
+import Footer from "@/components/site/Footer";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));

@@ -27,12 +27,6 @@ export default function BusinessSolutions({ locale, title, items }: Props) {
     const section = sectionRef.current;
     if (!section || !items.length) return;
 
-    const reduceMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
-
-    if (reduceMotion) return;
-
     const ctx = gsap.context(() => {
       const heading = section.querySelector<HTMLElement>("[data-heading]");
       const cards = gsap.utils.toArray<HTMLElement>(

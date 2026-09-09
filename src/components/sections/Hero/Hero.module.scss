@@ -391,6 +391,7 @@
 @media (max-width: 900px) {
     .hero {
         min-height: 680px;
+        height: auto !important;
     }
 
     .visual {
@@ -420,6 +421,7 @@
 @media (max-width: 560px) {
     .hero {
         min-height: 650px;
+
     }
 
     .backgroundImage {
@@ -436,6 +438,8 @@
     .content {
         width: calc(100% - 40px);
         padding-top: 120px;
+        padding-bottom: 50px;
+        display: block;
     }
 
     .topMeta {
