@@ -1,25 +1,30 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
-import { ArrowUpRight, ChevronRight, Menu, X } from 'lucide-react';
-import gsap from 'gsap';
-import { localeMeta, locales, type Locale } from '@/i18n/config';
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { ArrowUpRight, ChevronRight, Menu, X } from "lucide-react";
+import gsap from "gsap";
+import { localeMeta, locales, type Locale } from "@/i18n/config";
 import {
   navTreeAR,
   navTreeBN,
   navTreeEN,
   navTreeES,
   type NavItem,
-} from '@/constants/navTree';
-import { techAR, techBN, techEN, techES } from '@/constants/technologies';
-import { servicesAR, servicesBN, servicesEN, servicesES } from '@/constants/services';
-import styles from './SiteHeader.module.scss';
+} from "@/constants/navTree";
+import { techAR, techBN, techEN, techES } from "@/constants/technologies";
+import {
+  servicesAR,
+  servicesBN,
+  servicesEN,
+  servicesES,
+} from "@/constants/services";
+import styles from "./SiteHeader.module.scss";
 
 type HeaderProps = { locale: Locale };
-type DynamicType = 'technologies' | 'services';
+type DynamicType = "technologies" | "services";
 
 type DynamicItem = {
   id: string | number;
@@ -49,9 +54,9 @@ const servicesByLocale: Record<Locale, DynamicItem[]> = {
 };
 
 function withLocale(locale: Locale, link?: string) {
-  if (!link || link === '#') return `/${locale}`;
+  if (!link || link === "#") return `/${locale}`;
   if (/^https?:\/\//i.test(link)) return link;
-  return `/${locale}${link.startsWith('/') ? link : `/${link}`}`;
+  return `/${locale}${link.startsWith("/") ? link : `/${link}`}`;
 }
 
 function isExternal(link: string) {
@@ -72,56 +77,63 @@ export default function SiteHeader({ locale }: HeaderProps) {
   const timelineRef = useRef<gsap.core.Timeline | null>(null);
 
   const navTree = navByLocale[locale];
-  const localizedPath = pathname?.split('/').slice(2).join('/') || '';
+  const localizedPath = pathname?.split("/").slice(2).join("/") || "";
   const activeItem = useMemo(
     () => navTree.find((item) => item.id === activeId) ?? null,
     [activeId, navTree],
   );
 
   const getChildren = (item: NavItem): DynamicItem[] => {
-    if (item.dynamic === 'technologies') return techByLocale[locale];
-    if (item.dynamic === 'services') return servicesByLocale[locale];
+    if (item.dynamic === "technologies") return techByLocale[locale];
+    if (item.dynamic === "services") return servicesByLocale[locale];
     return (item.children ?? []).map((child) => ({
       id: child.id,
       title: child.title,
-      link: child.link ?? '#',
+      link: child.link ?? "#",
     }));
   };
 
-  const hasChildren = (item: NavItem) => Boolean(item.children?.length || item.dynamic);
+  const hasChildren = (item: NavItem) =>
+    Boolean(item.children?.length || item.dynamic);
 
   useLayoutEffect(() => {
     if (!panelRef.current) return;
 
-    gsap.set(panelRef.current, { clipPath: 'inset(0 0 100% 0)' });
+    gsap.set(panelRef.current, { clipPath: "inset(0 0 100% 0)" });
     gsap.set(navItemsRef.current, { y: 42, opacity: 0 });
     gsap.set(detailRef.current, { x: 36, opacity: 0 });
   }, []);
 
   useEffect(() => {
     const root = document.documentElement;
+
     if (!open) {
-      root.style.removeProperty('overflow');
+      root.style.removeProperty("overflow");
       return;
     }
 
-    root.style.overflow = 'hidden';
-    return () => root.style.removeProperty('overflow');
+    root.style.overflow = "hidden";
+
+    return () => {
+      root.style.removeProperty("overflow");
+    };
   }, [open]);
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape' && open) setOpen(false);
+      if (event.key === "Escape" && open) setOpen(false);
     };
 
-    window.addEventListener('keydown', onKeyDown);
-    return () => window.removeEventListener('keydown', onKeyDown);
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
   }, [open]);
 
   useEffect(() => {
     if (!open) return;
 
-    const current = navTree.find((item) => withLocale(locale, item.link) === pathname);
+    const current = navTree.find(
+      (item) => withLocale(locale, item.link) === pathname,
+    );
     if (current && hasChildren(current)) setActiveId(current.id);
   }, [locale, navTree, open, pathname]);
 
@@ -129,32 +141,64 @@ export default function SiteHeader({ locale }: HeaderProps) {
     if (!panelRef.current) return;
 
     timelineRef.current?.kill();
-    const tl = gsap.timeline({ defaults: { ease: 'power4.out' } });
+
+    const tl = gsap.timeline({
+      defaults: { ease: "power4.out" },
+    });
+
     timelineRef.current = tl;
 
     if (open) {
       tl.to(panelRef.current, {
-        clipPath: 'inset(0 0 0% 0)',
+        clipPath: "inset(0 0 0% 0)",
         duration: 0.72,
-        ease: 'power4.inOut',
+        ease: "power4.inOut",
       })
         .to(
           navItemsRef.current,
-          { y: 0, opacity: 1, duration: 0.62, stagger: 0.055 },
-          '-=0.34',
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.62,
+            stagger: 0.055,
+          },
+          "-=0.34",
         )
-        .to(detailRef.current, { x: 0, opacity: 1, duration: 0.62 }, '-=0.46');
+        .to(
+          detailRef.current,
+          {
+            x: 0,
+            opacity: 1,
+            duration: 0.62,
+          },
+          "-=0.46",
+        );
     } else {
-      tl.to(detailRef.current, { x: 24, opacity: 0, duration: 0.2 })
-        .to(navItemsRef.current, { y: 22, opacity: 0, duration: 0.18, stagger: 0.015 }, '<')
+      tl.to(detailRef.current, {
+        x: 24,
+        opacity: 0,
+        duration: 0.2,
+      })
+        .to(
+          navItemsRef.current,
+          {
+            y: 22,
+            opacity: 0,
+            duration: 0.18,
+            stagger: 0.015,
+          },
+          "<",
+        )
         .to(panelRef.current, {
-          clipPath: 'inset(0 0 100% 0)',
+          clipPath: "inset(0 0 100% 0)",
           duration: 0.5,
-          ease: 'power3.inOut',
+          ease: "power3.inOut",
         });
     }
 
-    return () => tl.kill();
+    return () => {
+      tl.kill();
+    };
   }, [open]);
 
   useLayoutEffect(() => {
@@ -164,7 +208,7 @@ export default function SiteHeader({ locale }: HeaderProps) {
     gsap.fromTo(
       children,
       { y: 18, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.42, stagger: 0.035, ease: 'power3.out' },
+      { y: 0, opacity: 1, duration: 0.42, stagger: 0.035, ease: "power3.out" },
     );
   }, [activeId, open]);
 
@@ -206,9 +250,9 @@ export default function SiteHeader({ locale }: HeaderProps) {
             {locales.map((item) => (
               <Link
                 key={item}
-                href={`/${item}${localizedPath ? `/${localizedPath}` : ''}`}
-                className={`${styles.language} ${item === locale ? styles.activeLanguage : ''}`}
-                aria-current={item === locale ? 'page' : undefined}
+                href={`/${item}${localizedPath ? `/${localizedPath}` : ""}`}
+                className={`${styles.language} ${item === locale ? styles.activeLanguage : ""}`}
+                aria-current={item === locale ? "page" : undefined}
               >
                 <span>{localeMeta[item].nativeLabel}</span>
               </Link>
@@ -222,9 +266,13 @@ export default function SiteHeader({ locale }: HeaderProps) {
             aria-expanded={open}
             aria-controls="jionex-navigation"
           >
-            <span className={styles.menuLabel}>{open ? 'CLOSE' : 'MENU'}</span>
+            <span className={styles.menuLabel}>{open ? "CLOSE" : "MENU"}</span>
             <span className={styles.menuIcon} aria-hidden="true">
-              {open ? <X size={20} strokeWidth={1.5} /> : <Menu size={20} strokeWidth={1.5} />}
+              {open ? (
+                <X size={20} strokeWidth={1.5} />
+              ) : (
+                <Menu size={20} strokeWidth={1.5} />
+              )}
             </span>
           </button>
         </div>
@@ -263,17 +311,23 @@ export default function SiteHeader({ locale }: HeaderProps) {
                         if (node) navItemsRef.current[index] = node;
                       }}
                       href={target}
-                      target={external ? '_blank' : undefined}
-                      rel={external ? 'noreferrer' : undefined}
-                      className={`${styles.primaryLink} ${selected ? styles.selected : ''}`}
+                      target={external ? "_blank" : undefined}
+                      rel={external ? "noreferrer" : undefined}
+                      className={`${styles.primaryLink} ${selected ? styles.selected : ""}`}
                       onMouseEnter={() => handleMenuItem(item)}
                       onFocus={() => handleMenuItem(item)}
                       onClick={handleNavClick}
                     >
-                      <span className={styles.index}>{String(index + 1).padStart(2, '0')}</span>
+                      <span className={styles.index}>
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
                       <span className={styles.title}>{item.title}</span>
                       {hasChildren(item) && (
-                        <ChevronRight className={styles.chevron} size={22} strokeWidth={1.25} />
+                        <ChevronRight
+                          className={styles.chevron}
+                          size={22}
+                          strokeWidth={1.25}
+                        />
                       )}
                     </Link>
                   </div>
@@ -282,11 +336,17 @@ export default function SiteHeader({ locale }: HeaderProps) {
             </nav>
           </div>
 
-          <aside ref={detailRef} className={styles.detailColumn} aria-live="polite">
+          <aside
+            ref={detailRef}
+            className={styles.detailColumn}
+            aria-live="polite"
+          >
             {activeItem && hasChildren(activeItem) ? (
               <>
                 <div className={styles.detailHead}>
-                  <span className={styles.detailKicker}>{activeItem.title}</span>
+                  <span className={styles.detailKicker}>
+                    {activeItem.title}
+                  </span>
                   <Link
                     href={withLocale(locale, activeItem.link)}
                     className={styles.viewAll}
@@ -312,7 +372,7 @@ export default function SiteHeader({ locale }: HeaderProps) {
                         if (node) detailItemsRef.current[index] = node;
                       }}
                     >
-                      <span>{String(index + 1).padStart(2, '0')}</span>
+                      <span>{String(index + 1).padStart(2, "0")}</span>
                       <strong>{child.title}</strong>
                       <ArrowUpRight size={15} strokeWidth={1.2} />
                     </Link>
