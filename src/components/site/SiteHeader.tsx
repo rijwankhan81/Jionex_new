@@ -118,7 +118,6 @@ export default function SiteHeader({ locale }: HeaderProps) {
       body.style.removeProperty("right");
       body.style.removeProperty("width");
       body.style.removeProperty("overflow");
-      body.style.removeProperty("touch-action");
       return;
     }
 
@@ -134,7 +133,6 @@ export default function SiteHeader({ locale }: HeaderProps) {
     body.style.right = "0";
     body.style.width = "100%";
     body.style.overflow = "hidden";
-    body.style.touchAction = "none";
 
     return () => {
       root.style.removeProperty("overflow");
@@ -144,7 +142,6 @@ export default function SiteHeader({ locale }: HeaderProps) {
       body.style.removeProperty("right");
       body.style.removeProperty("width");
       body.style.removeProperty("overflow");
-      body.style.removeProperty("touch-action");
 
       window.scrollTo({
         top: scrollY,
