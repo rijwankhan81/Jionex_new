@@ -108,14 +108,49 @@ export default function SiteHeader({ locale }: HeaderProps) {
 
   useEffect(() => {
     const root = document.documentElement;
+    const body = document.body;
+
     if (!open) {
       root.style.removeProperty("overflow");
+      body.style.removeProperty("position");
+      body.style.removeProperty("top");
+      body.style.removeProperty("left");
+      body.style.removeProperty("right");
+      body.style.removeProperty("width");
+      body.style.removeProperty("overflow");
+      body.style.removeProperty("touch-action");
       return;
     }
 
+    // Lock the real document position. This also prevents Lenis/native
+    // scrolling from moving the page while the navigation overlay is open.
+    const scrollY = window.scrollY;
+
     root.style.overflow = "hidden";
+
+    body.style.position = "fixed";
+    body.style.top = `-${scrollY}px`;
+    body.style.left = "0";
+    body.style.right = "0";
+    body.style.width = "100%";
+    body.style.overflow = "hidden";
+    body.style.touchAction = "none";
+
     return () => {
       root.style.removeProperty("overflow");
+      body.style.removeProperty("position");
+      body.style.removeProperty("top");
+      body.style.removeProperty("left");
+      body.style.removeProperty("right");
+      body.style.removeProperty("width");
+      body.style.removeProperty("overflow");
+      body.style.removeProperty("touch-action");
+
+      window.scrollTo({
+        top: scrollY,
+        left: 0,
+        behavior: "auto",
+      });
     };
   }, [open]);
 

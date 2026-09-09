@@ -283,6 +283,7 @@
   min-height: 100svh;
   margin: 0 auto;
   padding: clamp(120px, 13vh, 160px) clamp(24px, 5vw, 82px) clamp(35px, 5vh, 65px);
+  overflow-x: auto;
 }
 
 .menuColumn,
