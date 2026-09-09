@@ -3,11 +3,8 @@
 import Link from "next/link";
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import type { Locale } from "@/i18n/config";
 import styles from "./Hero.module.scss";
-
-gsap.registerPlugin(ScrollTrigger);
 
 type HeroProps = {
   locale: Locale;
@@ -116,72 +113,13 @@ export default function Hero({
           0.62,
         );
 
-      // The hero has a real scroll-driven transformation, not just an
-      // entrance animation.
-      const scroll = gsap.timeline({
-        scrollTrigger: {
-          trigger: root,
-          start: "top top",
-          end: "+=115%",
-          scrub: 1,
-          pin: true,
-          anticipatePin: 1,
-          invalidateOnRefresh: true,
-        },
-      });
-
-      scroll
-        .to(
-          image,
-          {
-            scale: 1.3,
-            opacity: 0.25,
-            ease: "none",
-            duration: 1,
-          },
-          0,
-        )
-        .to(
-          visual,
-          {
-            scale: 1.18,
-            rotation: -7,
-            xPercent: 8,
-            opacity: 0.35,
-            ease: "none",
-            duration: 1,
-          },
-          0,
-        )
-        .to(
-          grid,
-          {
-            opacity: 0.55,
-            scale: 1.2,
-            ease: "none",
-            duration: 1,
-          },
-          0,
-        );
-
-      // Desktop only: move/fade the hero content during scroll.
-      // Tablet and mobile keep the text/buttons completely stationary.
-      if (window.innerWidth > 1024) {
-        scroll.to(
-          content,
-          {
-            yPercent: -22,
-            xPercent: -5,
-            opacity: 0.05,
-            ease: "none",
-            duration: 1,
-          },
-          0,
-        );
-      }
+      // No scroll pinning here. The hero stays in the normal document flow
+      // so the next section arrives immediately after the hero viewport.
+      // The content is intentionally not transformed/faded by scroll.
+      // Only the entrance animation above runs when the hero loads.
 
       const onPointerMove = (event: PointerEvent) => {
-        if (window.innerWidth < 1024) return;
+        if (window.innerWidth < 900) return;
 
         const x = event.clientX / window.innerWidth - 0.5;
         const y = event.clientY / window.innerHeight - 0.5;
@@ -215,8 +153,6 @@ export default function Hero({
 
       root.addEventListener("pointermove", onPointerMove, { passive: true });
       root.addEventListener("pointerleave", onPointerLeave);
-
-      window.setTimeout(() => ScrollTrigger.refresh(), 100);
 
       return () => {
         root.removeEventListener("pointermove", onPointerMove);
