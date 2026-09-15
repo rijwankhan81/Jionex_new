@@ -1,0 +1,1544 @@
+body {
+    max-width: 2000px;
+    margin: auto;
+}
+
+.serviceBanner {
+    background-image: url('/images/services1-bg.png');
+    background-position: 40% 25%;
+    background-repeat: no-repeat;
+    padding: 30px 0px 100px 0px;
+}
+
+.serviceBanner .Heading {
+    padding: 0px 354px;
+}
+
+.serviceBanner1 .Heading {
+    padding: 0px 354px;
+    text-align: center;
+}
+
+.fs21 {
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.fs21N {
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.hyperlinks a {
+    margin-inline: 5px;
+}
+
+.fs90 {
+    font-size: 90px;
+    font-weight: 700;
+}
+
+.serviceBanner .head {
+    text-align: center;
+    line-height: 110px;
+    padding-bottom: 50px;
+    padding-top: 100px;
+}
+
+.serviceBanner p {
+    text-align: center;
+    text-align-last: center;
+    line-height: 40px;
+}
+
+.serviceSec2 {
+    position: relative;
+    padding-top: 30px;
+}
+
+.serviceSec2 img {
+    width: auto;
+    margin: auto;
+}
+
+.serviceSec2 .serviceWrapper {
+    position: absolute;
+    top: -4%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+
+}
+
+.serviceSec2 .serviceWrapper a {
+    box-shadow: 0 0 0 30px #f6f7fd;
+}
+
+.serviceSec3 {
+    padding: 100px 0px;
+}
+
+.serviceSec3 .head {
+    text-align: center;
+}
+
+.serviceSec3 .Heading {
+    padding: 0px 100px;
+    text-align: center;
+}
+
+.serviceSec3 .Heading p {
+    line-height: 40px;
+}
+
+.serviceSec3 .Heading .head {
+    padding-bottom: 15px;
+}
+
+.serviceMain2 {
+    background-image: url('/images/servicegrad.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.serviceSec3 .container {
+    max-width: 1650px;
+}
+
+.serviceBanner4 {
+    background-image: url('/images/custom-bg.jpg');
+    background-position: 40% 25%;
+    background-repeat: no-repeat;
+    padding: 30px 0px 100px 0px;
+}
+
+.serviceBanner4 .Heading {
+    padding: 0px 324px;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.serviceBanner4 .Heading p {
+    padding: 0px 300px;
+}
+
+.wordpressIMG {
+    border-radius: 50px !important;
+    width: -webkit-fill-available !important;
+    height: 600px;
+}
+
+.customIMG {
+    border-radius: 50px !important;
+    width: -webkit-fill-available !important;
+    height: 600px;
+}
+
+.serviceBanner3 {
+    background-image: url('/images/wordpress1.jpg');
+    background-position: 40% 25%;
+    background-repeat: no-repeat;
+    padding: 30px 0px 100px 0px;
+}
+
+.serviceBanner3 .Heading {
+    padding: 0px 324px;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.serviceBanner3 .Heading p {
+    padding: 0px 300px;
+}
+
+.serviceSec3Flex {
+    padding-top: 45px;
+}
+
+.language {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+
+    @media screen and (max-width: 767px) {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    @media screen and (max-width: 575px) {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .langBox {
+        background: #fff;
+        padding: 10px;
+        box-shadow: 0 50px 100px -20px rgb(109 11 127 / 42%), 0 30px 60px -30px hsl(321.28deg 57.09% 48.43%), inset 0 -2px 6px 0 rgb(144 28 134 / 24%);
+        border-radius: 8px;
+
+        .fs24N {
+            font-size: 18px;
+            line-height: 18px;
+        }
+    }
+}
+
+.langBox {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.langBox img {
+    width: 36px;
+    height: 36px;
+}
+
+.language.lang1 {
+    padding-top: 10px;
+}
+
+.portWrapper1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.Portfolio1 p {
+    padding: 20px 0px;
+}
+
+.Portfolio4 p {
+    padding: 20px 0px;
+}
+
+.iconS .head {
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.serviceSec4 {
+    padding: 75px 0px 100px 0px;
+}
+
+.serviceSec5 {
+    padding: 100px 0px;
+    position: relative;
+
+}
+
+.serviceSec5 .row>* {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.serviceSec5A {
+    background-image: url('/images/serviceSec4img1.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+}
+
+.serviceSec5 .bordPink {
+    border-right: 1px solid black;
+}
+
+.serviceSec5 .left {
+    padding: 300px 50px 80px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.serviceSec5 .head {
+    line-height: 80px;
+}
+
+.service5Flex {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.service5Flex img {
+    height: 2px;
+}
+
+.serviceSec5 .arrow1 {
+    border-radius: 30px;
+    background: linear-gradient(225deg, $secondary 0%, $primary 100%);
+    box-shadow: 0px 29px 58px 0px #e50d8f3d;
+    margin-bottom: 30px;
+    padding: 30px;
+    top: 10%;
+    left: 37.9%;
+    position: absolute;
+}
+
+.service5Flex {
+    display: flex;
+}
+
+.service5Flex .event {
+    padding: 20px 20px;
+    border: 1.5px solid;
+    border-image-source: linear-gradient(225deg, $secondary 0%, $primary 100%);
+    border-radius: 30px;
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border: 1.5px solid $primary;
+    box-shadow: 0px 40px 50px 0px #851D7D1A;
+    text-align: center;
+}
+
+section.container.serviceSec4 {
+    max-width: 1672px;
+}
+
+.serviceSec5A {
+    max-width: 1672px;
+}
+
+.serviceSec6 {
+    padding: 50px 0px 100px 0px;
+}
+
+.serviceSec6 .container {
+    max-width: 1602px;
+}
+
+.serviceMain2 .iconS {
+    padding: 60px 120px;
+    box-shadow: none;
+    background-color: #f4f4f4;
+}
+
+.serviceBanner1 {
+    background-image: url('/images/custom-bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 30px 0px 100px 0px;
+    margin-bottom: 40px;
+}
+
+.serviceBanner2 {
+    background-image: url('/images/frontendBG.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px 0px 100px 0px;
+    margin-bottom: 60px;
+}
+
+.serviceBanner2 .Heading {
+    padding: 90px 354px;
+    text-align: center;
+}
+
+.serviceBanner1 .Heading {
+    padding: 90px 354px;
+    text-align: center;
+}
+
+.iosIMG {
+    border-radius: 50px !important;
+    width: -webkit-fill-available !important;
+    height: 600px;
+}
+
+.btn_pink2.iosBtn {
+    display: block;
+    margin: auto;
+    top: 10%;
+}
+
+.Heading div {
+    line-height: normal;
+    padding-bottom: 30px;
+}
+
+.serviceSec2 .frontendIMG {
+    border-radius: 70px;
+}
+
+.React-NativeIMG {
+    border-radius: 50px !important;
+    width: -webkit-fill-available !important;
+    height: 600px;
+}
+
+.ios img {
+    width: 69px;
+    height: 69px;
+}
+
+.serviceBanner1.react .Heading {
+    padding: 79px 176px;
+    text-align: center;
+}
+
+
+
+.arrow1.react {
+    padding: 40px 40px;
+    top: 8%;
+    right: 5.2%;
+    border-radius: 40px;
+    font-size: 10px;
+}
+
+.webDevIMG {
+    border-radius: 50px !important;
+    width: -webkit-fill-available !important;
+    height: 650px;
+}
+
+@media screen and (max-width: 1750px) {
+    .serviceBanner .Heading {
+        padding: 0px 249px;
+    }
+
+
+
+    .serviceSec2 a {
+        padding: 30px 70px;
+        font-size: 18.86px;
+    }
+
+    .serviceSec3 .Heading {
+        padding: 0px 244px;
+        text-align: center;
+        line-height: 80px;
+    }
+
+    .serviceSec3 .Heading p {
+        line-height: 30px;
+    }
+
+    .serviceSec3 .Heading .head {
+        padding-bottom: 5px;
+    }
+
+    .serviceSec3 .container {
+        max-width: 1500px;
+    }
+
+    section.container.serviceSec4 {
+        max-width: 1500px;
+    }
+
+    .serviceSec4 {
+        padding: 75px 0px 77px 0px;
+    }
+
+    .serviceSec5A {
+        max-width: 1500px;
+    }
+
+    .serviceSec5 .left {
+        padding: 195px 50px 80px 50px;
+    }
+
+    .serviceSec5 .head {
+        line-height: 51px;
+    }
+
+    .serviceSec5 .arrow1 {
+        padding: 11px 11px;
+        top: 10%;
+        left: 38.9%;
+    }
+
+    .serviceSec6 {
+        padding: 0px;
+    }
+
+    .serviceSec6 .container {
+        max-width: 1500px;
+    }
+
+    .serviceBanner1 .Heading {
+        padding: 75px 268px;
+        text-align: center;
+    }
+
+    .serviceBanner1 {
+        padding: 30px 0px 47px 0px;
+    }
+
+    .serviceBanner2 .Heading {
+        padding: 75px 222px;
+    }
+
+    .serviceWrapper.react {
+        top: -4%;
+        left: 38%;
+    }
+
+    .React-NativeIMG {
+        height: 550px;
+    }
+
+    .webDevIMG {
+
+        height: 550px;
+    }
+
+    .arrow1.react {
+        padding: 25px 25px;
+        top: 6%;
+        right: 8.2%;
+        border-radius: 40px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .serviceBanner .head {
+        line-height: 89px;
+        padding-bottom: 30px;
+        padding-top: 98px;
+    }
+
+    .fs90 {
+        font-size: 80px;
+    }
+
+    .serviceBanner .Heading {
+        padding: 0px 150px;
+    }
+
+
+    .language {
+        gap: 24px;
+    }
+
+    .serviceSec3 .container {
+        max-width: 1325px;
+    }
+
+    .serviceSec3 .Heading {
+        padding: 0px 206px;
+    }
+
+    .serviceSec4 {
+        max-width: 1325px !important;
+    }
+
+    .serviceSec3 {
+        padding: 53px 20px;
+    }
+
+    .serviceSec5A {
+        max-width: 1325px;
+    }
+
+    .serviceSec5 .arrow1 {
+        padding: 15px 13px;
+        top: 13%;
+        left: 38.9%;
+    }
+
+    .serviceSec6 .container {
+        max-width: 1325px;
+    }
+
+    .serviceSec5 .left {
+        padding: 164px 50px 80px 50px;
+    }
+
+    .Portfolio1 p {
+        padding: 0px 0px;
+    }
+
+    .Portfolio4 p {
+        padding: 0px 0px;
+    }
+
+    .fs90 {
+        font-size: 69px;
+    }
+
+    .serviceBanner .head {
+        line-height: 76px;
+    }
+
+    .serviceBanner p {
+        line-height: 30px;
+    }
+
+    .language {
+        gap: 17px;
+    }
+
+    .serviceSec5 .arrow1 {
+        padding: 15px 13px;
+        top: 10%;
+        left: 38.9%;
+    }
+
+    .serviceSec2 a {
+        padding: 30px 62px;
+        font-size: 18.86px;
+    }
+
+    .serviceBanner1 {
+        padding: 35px 0px 35px 0px;
+    }
+
+    .serviceBanner2 .Heading {
+        padding: 75px 200px;
+    }
+
+    .serviceBanner2 {
+        padding: 20px 0px 29px 0px;
+        margin-bottom: 50px;
+    }
+
+    .serviceSec3.frontend .language {
+        gap: 40px;
+    }
+
+    .serviceWrapper.react {
+        top: -4%;
+        left: 36%;
+    }
+
+    .arrow1.react {
+        padding: 25px 25px;
+        top: 9%;
+        right: 8.2%;
+        border-radius: 40px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .serviceSec3 .Heading {
+        padding: 0px 161px;
+    }
+
+    .serviceSec3 .container {
+        max-width: 1150px;
+    }
+
+    .language {
+        gap: 18px;
+    }
+
+    .serviceSec3Flex {
+        gap: 11px;
+    }
+
+    .langBox img {
+        width: 40px;
+    }
+
+    .fs24N {
+        font-size: 18px;
+    }
+
+    .serviceSec4 {
+        max-width: 1150px !important;
+    }
+
+    .fs35D {
+        font-size: 29.53px;
+        font-weight: 700;
+    }
+
+    .serviceSec5A {
+        max-width: 1180px;
+    }
+
+    .serviceSec5 .left {
+        padding: 164px 26px 80px 26px;
+    }
+
+    .serviceSec5 .row>* {
+        gap: 20px;
+    }
+
+    .serviceSec5 .head {
+        line-height: 39px;
+    }
+
+    .serviceSec5 .arrow1 {
+        padding: 15px 13px;
+        top: 13%;
+        left: 37.9%;
+    }
+
+    .serviceSec6 .container {
+        max-width: 1180px;
+    }
+
+    .fs32 {
+        font-size: 20px;
+    }
+
+    .fs80 {
+        font-size: 42px;
+    }
+
+    .serviceSec2 a {
+        padding: 23px 37px;
+        font-size: 18.86px;
+    }
+
+    .serviceBanner1 .Heading {
+        padding: 40px 175px;
+        text-align: center;
+    }
+
+    .iosIMG {
+        height: 500px;
+    }
+
+    .btn_pink2.iosBtn {
+        left: 10px;
+    }
+
+    .serviceBanner1 {
+        padding: 35px 0px 35px 0px;
+    }
+
+    .serviceBanner2 .Heading {
+        padding: 40px 148px;
+    }
+
+    .serviceBanner2 {
+        margin-bottom: 0px;
+    }
+
+    .ios img {
+        width: 69px;
+        height: 69px;
+    }
+
+    .serviceSec2 .frontendIMG {
+        border-radius: 50px;
+    }
+
+    .serviceBanner3 {
+
+        padding: 30px 0px 40px 0px;
+    }
+
+    .wordpressIMG {
+        border-radius: 50px !important;
+        width: -webkit-fill-available !important;
+        height: 420px;
+    }
+
+    .contact {
+        padding: 41px 0px 70px 0px;
+    }
+
+    .fs90 {
+        font-size: 64px;
+    }
+
+    .serviceBanner4 .Heading p {
+        padding: 0px 160px;
+    }
+
+    .serviceBanner4 {
+        padding: 30px 0px 51px 0px;
+    }
+
+    .customIMG {
+        height: 450px;
+    }
+
+    .serviceBanner3 .Heading p {
+        padding: 0px 156px;
+    }
+
+    .serviceBanner1.react .Heading {
+        padding: 79px 118px;
+        text-align: center;
+    }
+
+    .serviceBanner1.react {
+        padding: 35px 0px 0px 0px;
+    }
+
+    .serviceSec3 .Heading .head {
+        padding-bottom: 10px;
+    }
+
+    .serviceWrapper.react {
+        top: -4%;
+        left: 36%;
+    }
+
+    .React-NativeIMG {
+        height: 500px;
+    }
+
+    .arrow1.react {
+        left: 35.9%;
+    }
+
+    .arrow1.react {
+        padding: 25px 25px;
+        top: 11%;
+        right: 8.2%;
+        border-radius: 40px;
+        font-size: 10px;
+    }
+
+    .webDevIMG {
+
+        height: 500px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .serviceBanner .Heading {
+        padding: 0px 99px;
+    }
+
+    .fs90 {
+        font-size: 64px;
+    }
+
+    .serviceBanner .head {
+        line-height: 67px;
+    }
+
+    .serviceSec3 .container {
+        max-width: 980px;
+    }
+
+    .serviceSec3 .Heading {
+        padding: 0px;
+    }
+
+    .serviceSec3 .Heading p {
+        line-height: 23px;
+    }
+
+    .serviceSec3 .Heading .head {
+        padding-bottom: 10px;
+    }
+
+    .langBox {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+    }
+
+    .langBox img {
+        width: 40px;
+    }
+
+    .fs24N {
+        font-size: 12px;
+    }
+
+    .serviceSec4 {
+        max-width: 941px !important;
+    }
+
+    .serviceSec4 .line {
+        width: 23%;
+    }
+
+    .ind5head {
+        padding: 20px 0px 26px;
+    }
+
+    .fs35D {
+        font-size: 21.53px;
+        font-weight: 700;
+    }
+
+    .serviceMain2 .iconS {
+        padding: 14px 13px;
+        box-shadow: none;
+        background-color: #f4f4f4;
+    }
+
+    .serviceSec5A.container {
+        max-width: 943px;
+    }
+
+    .serviceSec5A .left {
+        padding: 103px 27px 41px 22px;
+    }
+
+    .serviceSec5 .row>* {
+        gap: 12px;
+    }
+
+    .serviceSec5 .head {
+        line-height: 38px;
+    }
+
+    .serviceSec5 .arrow1 {
+        padding: 0px 0px;
+        top: 15%;
+        left: 38.2%;
+        border-radius: 20px;
+    }
+
+    .serviceSec4 {
+        padding: 27px 0px 39px 0px;
+    }
+
+    .Portfolio4,
+    .Portfolio1 {
+        border-radius: 40.99px;
+        padding: 20px 22px 0px 23px;
+
+    }
+
+    .fs32 {
+        font-size: 18px;
+    }
+
+    .serviceSec6 .container {
+        max-width: 958px;
+    }
+
+    .service5Flex {
+        gap: 12px;
+    }
+
+    .serviceSec2 a {
+        padding: 23px 31px;
+        font-size: 14.86px;
+    }
+
+
+    .serviceBanner1 .Heading {
+        padding: 40px 169px;
+        text-align: center;
+    }
+
+    .Heading div {
+        line-height: normal;
+        padding-bottom: 16px;
+    }
+
+    .btn_pink2.iosBtn {
+        display: block;
+        margin: auto;
+        top: 10px;
+    }
+
+    .iosIMG {
+        height: 400px;
+    }
+
+    .serviceBanner1 {
+        padding: 35px 0px 35px 0px;
+    }
+
+    .serviceBanner2 .Heading {
+        padding: 40px 99px;
+    }
+
+    .fs21,
+    .fs21N {
+        font-size: 15px;
+    }
+
+    .serviceSec2 .frontendIMG {
+        border-radius: 40px;
+    }
+
+    .ios img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .fs90 {
+        font-size: 54px;
+    }
+
+    .wordpressIMG {
+        height: 450px;
+    }
+
+    .serviceBanner .head {
+        line-height: 60px;
+        padding-bottom: 15px;
+        padding-top: 55px;
+    }
+
+    .serviceBanner {
+        padding: 30px 0px 50px 0px;
+    }
+
+    .serviceBanner1.react .Heading {
+        padding: 75px 100px;
+        text-align: center;
+    }
+
+    .React-NativeIMG {
+        height: 450px;
+    }
+
+    .serviceWrapper.react {
+        top: -4%;
+        left: 35%;
+    }
+
+    .serviceBanner3 .Heading p {
+        padding: 0px 156px;
+        font-size: 16px;
+    }
+
+    .webDevIMG {
+
+        height: 450px;
+    }
+
+    .serviceWrapper.webDev {
+        left: 35.5%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .fs90 {
+        font-size: 42px;
+    }
+
+    .serviceBanner3 .Heading p {
+        padding: 0px;
+    }
+
+    .wordpressIMG {
+        height: 278px;
+    }
+
+
+
+
+    .sec4 a {
+        font-size: 13px !important;
+    }
+
+    .ind5head {
+        padding: 20px 0px 26px;
+        line-height: 30px;
+    }
+
+    .serviceSec4 {
+        padding: 0px 20px;
+    }
+
+    .serviceSec5 {
+        padding: 100px 20px;
+    }
+
+    .service5Flex img {
+        height: 2px;
+        width: 10%;
+    }
+
+    .serviceSec5 .head p {
+        padding: 0px 350px 0px 0px;
+    }
+
+    .serviceSec5 .arrow1 {
+        top: 16%;
+        left: 32.2%;
+    }
+
+    .serviceBanner .head {
+        padding-bottom: 6px;
+    }
+
+    .serviceBanner .Heading {
+        padding: 0px;
+    }
+
+    .serviceBanner2 .Heading {
+        padding: 40px 0px;
+    }
+
+    .fs54 {
+        font-size: 25px;
+    }
+
+    .radialWrapper .flex {
+        gap: 10px !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+    .fs19B,
+    .fs19S,
+    .fs19D {
+        font-size: 12.35px;
+        font-weight: 600;
+    }
+
+    .tagsD,
+    .tagsA {
+        background-color: #efd8d8;
+        padding: 1.83px 7.4px;
+        border-radius: 95.65px;
+        margin: 2px 0px 2px 0px;
+    }
+
+    .serviceBanner4 .Heading p {
+        padding: 0px;
+    }
+
+    .customIMG {
+        height: 264px;
+        border-radius: 36px !important;
+    }
+
+    .serviceBanner4 {
+        padding: 30px 0px 2px 0px;
+    }
+
+    .serviceBanner1 .Heading {
+        padding: 40px 0px;
+        text-align: center;
+    }
+
+    .serviceBanner1 {
+        padding: 35px 0px 0px 0px;
+    }
+
+    .iosIMG {
+        height: 264px;
+        border-radius: 36px !important;
+    }
+
+    .wordpressIMG {
+        height: 264px;
+        border-radius: 36px !important;
+    }
+
+    .serviceBanner1.react .Heading {
+        padding: 75px 67px;
+        text-align: center;
+    }
+
+    .React-NativeIMG {
+        height: 341px;
+    }
+
+    .serviceWrapper.react {
+        top: -4%;
+        left: 32%;
+    }
+
+    .serviceBanner1.react .Heading {
+        padding: 56px 67px 23px 67px;
+        text-align: center;
+    }
+
+
+    .arrow1.react {
+        padding: 10px 10px;
+        top: 13%;
+        right: 10.2%;
+        border-radius: 20px;
+        font-size: 10px;
+    }
+
+    .webDevIMG {
+
+        height: 340px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .serviceBanner .Heading {
+        padding: 0px 0px;
+    }
+
+    .fs90 {
+        font-size: 32px;
+    }
+
+
+    .serviceSec3 .Heading {
+        padding: 0px 0px;
+        line-height: 35px;
+    }
+
+    .serviceSec3 .Heading p {
+        line-height: 20px;
+    }
+
+    .portWrapper1 {
+
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .service5Flex {
+        gap: 12px;
+        flex-direction: column;
+
+        display: flex;
+
+    }
+
+    .serviceSec5A .left {
+        padding: 103px 0px 41px 6px;
+    }
+
+    .serviceBanner .head {
+        line-height: 44px;
+        padding-bottom: 13px;
+        padding-top: 37px;
+    }
+
+    .serviceBanner p {
+        line-height: 23px;
+    }
+
+    .serviceSec3 .Heading .head {
+        padding-bottom: 10px;
+    }
+
+    .fs24N {
+        font-size: 16px;
+    }
+
+    .langBox img {
+        width: 36px;
+    }
+
+    .serviceSec4 {
+        padding: 27px 10px 39px 10px;
+    }
+
+    .service5Flex .event {
+        width: 100%;
+    }
+
+    .serviceSec5 {
+        padding: 45px 10px;
+        position: relative;
+    }
+
+    .fs21 {
+        font-size: 12px;
+    }
+
+    .fs21N {
+        font-size: 12px;
+    }
+
+    .hyperlinks a {
+        margin-inline: 2px;
+    }
+
+    .Portfolio4,
+    .Portfolio1 {
+        border-radius: 15.99px;
+        padding: 20px 10px 0px 10px;
+    }
+
+    .fs80 {
+        font-size: 33px;
+    }
+
+    .fs32 {
+        font-size: 16px;
+    }
+
+    .sec5Left {
+        background-image: url('/images/sec5Left.png');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 50px 10px;
+    }
+
+    .serviceFlex {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        align-items: center;
+    }
+
+    .serviceFlex img {
+        height: 1px;
+    }
+
+    .serviceSec5 .head {
+        line-height: 30px;
+    }
+
+    .sec5Left p {
+        padding: 0px 10px 0px 0px;
+    }
+
+    .fs24 {
+        font-size: 12px;
+    }
+
+    .sec5R {
+        margin-top: 20px;
+    }
+
+    .serviceSec5 .arrow1 {
+        padding: 0px 0px;
+        top: 5%;
+        left: 69.2%;
+        border-radius: 20px;
+        font-size: 10px;
+    }
+
+    .serviceSec2 a {
+        padding: 20px 40px;
+        font-size: 14.86px;
+    }
+
+    .serviceSec2 .serviceWrapper a {
+        box-shadow: 0 0 0 20px #f6f7fd;
+    }
+
+    .btn_pink2.iosBtn {
+        display: block;
+        margin: auto;
+        top: 112px;
+        left: 10px;
+    }
+
+    .serviceBanner1 .Heading {
+        padding: 23px 0px;
+        text-align: center;
+    }
+
+    .Heading div {
+        line-height: normal;
+        padding-bottom: 12px;
+    }
+
+    .iosIMG {
+        height: 220px;
+        border-radius: 15px !important;
+    }
+
+    .btn_pink2.iosBtn {
+        top: 20px;
+        left: 17px;
+    }
+
+    .lang1 .lang14 {
+        margin-left: -50px;
+    }
+
+    .serviceSec3Flex.IOS {
+        justify-content: start;
+        column-gap: 49px;
+    }
+
+    .fs30 {
+        font-size: 13px !important;
+    }
+
+    .FAQ .FAQheadR {
+        line-height: 30px;
+    }
+
+    .navLogo {
+        height: 40px;
+        width: auto;
+    }
+
+    .serviceBanner2 .Heading {
+        padding: 40px 0px;
+    }
+
+
+
+    .ios img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .serviceSec2 .frontendIMG {
+        border-radius: 10px;
+    }
+
+    .serviceBanner2 .serviceWrapper {
+        top: -33%;
+    }
+
+    .serviceSec3.frontend .language {
+        gap: 20px;
+    }
+
+    .serviceBanner {
+        padding: 22px 0px 37px 0px;
+    }
+
+    .serviceBanner .head {
+        padding-top: 13px;
+    }
+
+    .serviceBanner1 {
+        padding: 35px 0px 1px 0px;
+    }
+
+    .serviceBanner2 .Heading {
+        padding: 12px 0px;
+    }
+
+    .navbar {
+        padding: 5px 0px;
+    }
+
+    .sec4 a {
+        font-size: 10px !important;
+    }
+
+    .accordion-body p {
+        margin-left: 0px;
+    }
+
+    .accordion-button {
+        padding: 15px 15px;
+    }
+
+    .serviceBanner2 .Heading {
+        padding: 40px 0px;
+    }
+
+    .fs54 {
+        font-size: 18px;
+    }
+
+    .expFlex i {
+        color: #fff;
+        font-size: 11px;
+    }
+
+    .radialWrapper .flex {
+        gap: 15px !important;
+    }
+
+    .expBtnWrapper {
+
+        margin-top: 25px;
+    }
+
+    .btn_orange,
+    .btn_pink,
+    .btn_pink1,
+    .btn_pink2,
+    .btn_navW,
+    .btn_blue {
+        padding: 11.37px 20.38px;
+        font-size: 14.2px;
+    }
+
+    .expertise .expHead {
+        line-height: 30px;
+        padding-bottom: 20px;
+    }
+
+    .fs20 {
+        font-size: 13px;
+    }
+
+    .contact {
+        padding: 25px 0px 36px 0px;
+        text-align: center;
+    }
+
+
+
+
+    .secWord {
+        top: 0% !important;
+        left: 22.9% !important;
+    }
+
+    .secWord .WordpressBtn {
+        padding: 22px 32px;
+        font-size: 10.86px;
+    }
+
+    .wordpressIMG {
+        height: 190px;
+        border-radius: 22px !important;
+    }
+
+    .serviceBanner1.react .Heading {
+        padding: 26px 8px 23px 8px;
+        text-align: center;
+    }
+
+    .React-NativeBtn {
+        font-size: 12.5px !important;
+    }
+
+    .React-NativeIMG {
+        height: 200px;
+        border-radius: 20px !important;
+    }
+
+    .serviceBanner3.flutter .Heading {
+        padding: 0px 324px;
+        text-align: center;
+        padding: 50px 0 0px 0px;
+    }
+
+    .secAR a {
+        font-size: 10px;
+        padding: 20px 30px;
+    }
+
+
+
+    .serviceBanner3 .Heading p {
+        padding: 0px;
+        font-size: 13px;
+    }
+
+    .serviceBanner3 .Heading {
+
+        padding: 50px 0 0px;
+    }
+
+    .services5 .arrow1.react {
+        padding: 0px 0px;
+        top: 5%;
+        left: 73.2% !important;
+        border-radius: 20px;
+        font-size: 0px;
+    }
+
+    .webDevIMG {
+
+        height: 200px;
+    }
+
+    .serviceWrapper.webDev {
+        left: 15.9%;
+        top: 2px;
+
+    }
+
+    .serviceSec2 .webDevBtn {
+        padding: 23px;
+        font-size: 11.86px;
+    }
+}

@@ -1,0 +1,287 @@
+@use "/src/styles/var" as *;
+
+.main {
+    padding-top: 70px;
+}
+
+.breadcrumb {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+
+    li {
+        a {
+            text-decoration: none;
+            color: #718096;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        svg {
+            color: #718096;
+        }
+
+        &:nth-last-child(1) {
+            a {
+                color: $primary;
+            }
+        }
+    }
+}
+
+.frontend {
+    .techImage {
+        .wrapper {
+            background-image: url(/images/frontend.jpg);
+        }
+    }
+}
+
+.uiux {
+    .techImage {
+        .wrapper {
+            background-image: url(/images/ui-ux.jpg);
+        }
+    }
+}
+
+.backend {
+    .techImage {
+        .wrapper {
+            background-image: url(/images/backend.jpg);
+        }
+    }
+}
+
+.custom {
+    .techImage {
+        .wrapper {
+            background-image: url(/images/custom.jpg);
+        }
+    }
+}
+
+.android {
+    .techImage {
+        .wrapper {
+            background-image: url(/images/android.jpg);
+        }
+    }
+}
+
+.ios {
+    .techImage {
+        .wrapper {
+            background-image: url(/images/ios-dev.jpg);
+        }
+    }
+}
+
+.cms {
+    .techImage {
+        .wrapper {
+            background-image: url(/images/cms.jpg);
+        }
+    }
+}
+
+.cloud {
+    .techImage {
+        .wrapper {
+            background-image: url(/images/cloud.jpg);
+        }
+    }
+}
+
+.iot {
+    .techImage {
+        .wrapper {
+            background-image: url(/images/IOTA.jpg);
+        }
+    }
+}
+
+.ars {
+    .techImage {
+        .wrapper {
+            background-image: url(/images/argumented-reality.jpg);
+        }
+    }
+}
+
+.ai {
+    .techImage {
+        .wrapper {
+            background-image: url(/images/ai.jpg);
+        }
+    }
+}
+
+.blockchain {
+    .techImage {
+        .wrapper {
+            background-image: url(/images/blockchain.jpg);
+        }
+    }
+}
+
+.management {
+    .techImage {
+        .wrapper {
+            background-image: url(/images/management.jpg);
+        }
+    }
+}
+
+
+.smartSolution {
+    .techImage {
+        .wrapper {
+            background-image: url(/images/smartSolution.jpg);
+        }
+    }
+}
+
+.banner {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    background-image: url(/images/frontendBG.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .content {
+        padding-top: 80px;
+        max-width: 800px;
+        margin: auto;
+        text-align: center;
+
+        h1 {
+            font-size: 54px;
+            font-weight: 900;
+
+            span {
+                background: linear-gradient(225deg, $primary 0%, $secondary 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+}
+
+.techImage {
+    .wrapper {
+        height: 400px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50px;
+        position: relative;
+        background-position: center;
+
+        .btnWrapper {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: -moz-max-content;
+            width: max-content;
+            box-shadow: 0 0 50px 0 #8b41bf;
+            z-index: 1;
+
+            a {
+                padding: 25px 60px;
+                font-size: 18px;
+                background: linear-gradient(225deg, $primary 0%, $secondary 100%);
+                display: inline-block;
+                border-radius: 15px;
+                text-decoration: none;
+                transition: all 0.25s ease-in-out;
+                position: relative;
+                animation: btn 2s linear alternate;
+                color: #fff;
+                box-shadow: 0 0 0 30px #f6f7fd;
+                font-weight: 700;
+
+                &:hover {
+                    scale: 1.1;
+                }
+            }
+
+            @keyframes btn {
+                0% {
+                    opacity: 0.6;
+                }
+
+                10% {
+                    opacity: 1;
+                    transform: scale(0.8, 0.5);
+                }
+
+                20% {
+                    transform: scale(1.1, 1.4);
+                }
+
+                30% {
+                    transform: scale(0.8, 0.8);
+                }
+
+                40% {
+                    opacity: 1;
+                    transform: scale(1, 1);
+                }
+
+                60% {
+                    opacity: 1;
+                    transform: scale(0.8, 0.8);
+                }
+
+                100% {
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+}
+
+.skills {
+    padding: 100px 0;
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+
+        .skill {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #fff;
+            padding: 10px 15px;
+            box-shadow: 0 50px 100px -20px rgba(109, 11, 127, 0.42), 0 30px 60px -30px hsl(321.28, 57.09%, 48.43%), inset 0 -2px 6px 0 rgba(144, 28, 134, 0.24);
+            border-radius: 60px;
+
+            h3 {
+                font-size: 16px;
+                margin: 0;
+                font-weight: 500;
+            }
+
+            .icon {
+                background: linear-gradient(225deg, $primary 0%, $secondary 100%);
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 40px;
+
+                svg {
+                    font-size: 24px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

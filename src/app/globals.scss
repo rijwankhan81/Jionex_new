@@ -1,0 +1,72 @@
+@use "../styles/var" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--jx-bg);
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  background: var(--jx-bg);
+  color: var(--jx-text);
+  font-family: $font_one;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--jx-secondary);
+  color: #fff;
+}
+
+[data-locale="ar"] {
+  direction: rtl;
+}
+
+[data-locale="ar"] .ltr-only {
+  direction: ltr;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+}

@@ -1,0 +1,158 @@
+// ============================================================
+// JIONEX — Light Editorial Design Tokens
+// ============================================================
+
+$primary: #57007b;
+$secondary: #de4396;
+
+$primary-dark: #3f005a;
+$primary-soft: #f3e8f7;
+$secondary-soft: #fbe8f3;
+
+$white: #ffffff;
+$body-bg: #fbfafc;
+$surface: #ffffff;
+$surface-soft: #f7f4f8;
+$surface-muted: #f1edf3;
+
+$text: #17121a;
+$text-strong: #100c13;
+$text-muted: #766e79;
+$text-subtle: #9b929f;
+$text-inverse: #ffffff;
+
+$border: rgba(23, 18, 26, 0.11);
+$border-soft: rgba(23, 18, 26, 0.07);
+$border-strong: rgba(23, 18, 26, 0.18);
+
+$accent-gradient: linear-gradient(110deg, $primary 0%, $secondary 100%);
+$accent-gradient-soft: linear-gradient(
+  110deg,
+  rgba(87, 0, 123, 0.08) 0%,
+  rgba(222, 67, 150, 0.08) 100%
+);
+
+$shadow-sm: 0 8px 24px rgba(23, 18, 26, 0.06);
+$shadow-md: 0 18px 50px rgba(23, 18, 26, 0.09);
+$shadow-lg: 0 30px 80px rgba(23, 18, 26, 0.12);
+
+$font_one: "Poppins", sans-serif;
+$font_two: "Inter", sans-serif;
+
+$max-width: 1500px;
+$container-width: 1500px;
+$header-height: 88px;
+
+$xxxl: 1759px;
+$xxl: 1399px;
+$xl: 1199px;
+$lg: 991px;
+$md: 767px;
+$sm: 575px;
+
+$section-space: clamp(90px, 11vw, 180px);
+$container-pad: clamp(20px, 5vw, 82px);
+
+$radius-sm: 8px;
+$radius-md: 16px;
+$radius-lg: 28px;
+$radius-pill: 999px;
+
+$ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+$ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+$transition-fast: 0.25s ease;
+$transition-base: 0.4s $ease-editorial;
+$transition-slow: 0.7s $ease-editorial;
+
+:root {
+  --jx-primary: #{$primary};
+  --jx-secondary: #{$secondary};
+  --jx-primary-dark: #{$primary-dark};
+  --jx-primary-soft: #{$primary-soft};
+  --jx-secondary-soft: #{$secondary-soft};
+
+  --jx-white: #{$white};
+  --jx-bg: #{$body-bg};
+  --jx-surface: #{$surface};
+  --jx-surface-soft: #{$surface-soft};
+  --jx-surface-muted: #{$surface-muted};
+
+  --jx-text: #{$text};
+  --jx-text-strong: #{$text-strong};
+  --jx-text-muted: #{$text-muted};
+  --jx-text-subtle: #{$text-subtle};
+  --jx-text-inverse: #{$text-inverse};
+
+  --jx-border: #{$border};
+  --jx-border-soft: #{$border-soft};
+  --jx-border-strong: #{$border-strong};
+
+  --jx-accent-gradient: #{$accent-gradient};
+  --jx-accent-gradient-soft: #{$accent-gradient-soft};
+
+  --jx-shadow-sm: #{$shadow-sm};
+  --jx-shadow-md: #{$shadow-md};
+  --jx-shadow-lg: #{$shadow-lg};
+
+  --jx-max: #{$max-width};
+  --jx-container: #{$container-width};
+  --jx-header-height: #{$header-height};
+  --jx-section-space: #{$section-space};
+  --jx-container-pad: #{$container-pad};
+
+  --jx-radius-sm: #{$radius-sm};
+  --jx-radius-md: #{$radius-md};
+  --jx-radius-lg: #{$radius-lg};
+  --jx-radius-pill: #{$radius-pill};
+
+  --jx-ease-editorial: #{$ease-editorial};
+  --jx-ease-smooth: #{$ease-smooth};
+  --jx-transition-fast: #{$transition-fast};
+  --jx-transition-base: #{$transition-base};
+  --jx-transition-slow: #{$transition-slow};
+}
+
+.btnBlue,
+.btnPink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: $radius-pill;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform $transition-base, box-shadow $transition-base;
+}
+
+.btnBlue {
+  background: $primary;
+}
+
+.btnPink {
+  background: $secondary;
+}
+
+.btnBlue:hover,
+.btnPink:hover {
+  transform: translateY(-2px);
+  box-shadow: $shadow-sm;
+}
+
+.head {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto 48px;
+  text-align: center;
+
+  h2 {
+    margin: 0;
+    color: $text;
+    font-size: clamp(38px, 5vw, 72px);
+    line-height: .98;
+    font-weight: 700;
+    letter-spacing: -.055em;
+  }
+}

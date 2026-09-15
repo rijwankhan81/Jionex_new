@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.jionex.com
+
+# Sitemaps
+Sitemap: https://www.jionex.com/sitemap.xml

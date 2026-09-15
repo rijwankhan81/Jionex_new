@@ -1,0 +1,18 @@
+export const frontendTechnologies = [
+  { image: "/images/HTML.png", name: "HTML" },
+  { image: "/images/css.png", name: "CSS" },
+  { image: "/images/javascript.png", name: "Javascript" },
+  { image: "/images/jquery.png", name: "JQuery" },
+  { image: "/images/bootstrap.png", name: "Bootstrap" },
+  { image: "/images/MYSQL.png", name: "MySQL" },
+  { image: "/images/Gutenberg-Editor.png", name: "Gutenberg Editor" },
+  { image: "/images/REST-API-Integration.png", name: "REST API Integration" },
+  { image: "/images/WordPress-Themes.png", name: "WordPress" },
+  { image: "/images/react.png", name: "React" },
+  { image: "/images/vue.png", name: "VUE" },
+  { image: "/images/swiftt.png", name: "Swift" },
+  { image: "/images/angular.png", name: "Angular" },
+  { image: "/images/sass.png", name: "SASS" },
+  { image: "/images/django.png", name: "DJango" },
+  { image: "/images/Responsive-Design.png", name: "Responsive Design" },
+];

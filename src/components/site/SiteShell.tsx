@@ -1,0 +1,12 @@
+import { PropsWithChildren } from "react";
+import LenisProvider from "./LenisProvider";
+import styles from "./SiteShell.module.scss";
+
+export default function SiteShell({ children }: PropsWithChildren) {
+  return (
+    <div className={styles.shell}>
+      <LenisProvider />
+      {children}
+    </div>
+  );
+}

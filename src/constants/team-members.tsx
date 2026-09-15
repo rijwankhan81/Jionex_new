@@ -1,0 +1,167 @@
+export const boardOfDirectors = [
+  {
+    id: 1,
+    name: "Sakawat Jisan",
+    image: "/team_images/jisan.jpg",
+    image_ai: "/team_images/jisan.jpg",
+    alt: "Jionex",
+    description: null,
+    position: "Founder & Architect of Change",
+  },
+  {
+    id: 2,
+    name: "Omar Marosh",
+    image: "/team_images/Omar.jpeg",
+    image_ai: "/team_images/Omar.jpeg",
+    alt: "Jionex",
+    description: null,
+    position: "Co-Founder & System Architect",
+  },
+];
+
+export const advisoryBoard = [
+  {
+    id: 1,
+    name: "Nisha",
+    image: "/team_images/f1.png",
+    alt: "Jionex",
+    description: null,
+    position: "Legal Adviser",
+  },
+  {
+    id: 2,
+    name: "Tarequl Islam",
+    image: "/team_images/Tarequl.jpg",
+    alt: "Jionex",
+    description: null,
+    position: "Communication Adviser",
+  },
+];
+
+export const executiveLeadership = [
+  {
+    id: 1,
+    name: "Eman Ebrahim",
+    image: "/team_images/Eman.png",
+    alt: "Jionex",
+    description: null,
+    position: "Chief Financial Officer (CFO)",
+  },
+  {
+    id: 2,
+    name: "Ziauddin Siblo",
+    image: "/team_images/Ziauddin.jpg",
+    alt: "Jionex",
+    description: null,
+    position: "Chief Operations Officer (COO)",
+  },
+
+  {
+    id: 3,
+    name: "Main Uddin",
+    image: "/team_images/Main.jpeg",
+    alt: "Jionex",
+    description: null,
+    position: "Internal Audit & Compliance Officer",
+  },
+  {
+    id: 4,
+    name: "Md Hossain Goni",
+    image: "/team_images/Hossain.jpg",
+    alt: "Jionex",
+    description: null,
+    position: "Brand & Identity Manager",
+  },
+  {
+    id: 5,
+    name: "Fahim",
+    image: "/team_images/m1.png",
+    alt: "Jionex",
+    description: null,
+    position: "HR & Accounting Lead",
+  },
+  {
+    id: 6,
+    name: "Iftekhar",
+    image: "/team_images/m2.png",
+    alt: "Jionex",
+    description: null,
+    position: "Supply & Chain Executive",
+  },
+];
+
+export const technicalOpsTeam = [
+  {
+    id: 1,
+    name: "Shahbaj Ali",
+    image: "/team_images/Shahbaj_ali.jpeg",
+    alt: "Jionex",
+    description: null,
+    position: "Backend Tech Lead",
+  },
+  {
+    id: 2,
+    name: "Javed Khan",
+    image: "/team_images/Javed.jpg",
+    alt: "Jionex",
+    description: null,
+    position: "Frontend Tech Lead",
+  },
+  {
+    id: 3,
+    name: "Rijwan",
+    image: "/team_images/Rijwan.jpg",
+    alt: "Jionex",
+    description: null,
+    position: "Sr. UI/UX Experience Designer",
+  },
+  {
+    id: 4,
+    name: "Shailaja Kant",
+    image: "/team_images/Shailaja_kant.jpg",
+    alt: "Jionex",
+    description: null,
+    position: "Sr. Backend Systems Developer",
+  },
+  {
+    id: 5,
+    name: "Md Towhidul Chowdhury",
+    image: "/team_images/Towhidul.jpg",
+    alt: "Jionex",
+    description: null,
+    position: "Chief Information Security Officer (CISO)",
+  },
+
+  {
+    id: 6,
+    name: "Sayed Khan",
+    image: "/team_images/Sayed.jpg",
+    alt: "Jionex",
+    description: null,
+    position: "Sr. Full-Stack Software Developer",
+  },
+  {
+    id: 7,
+    name: "Mohammad Taha",
+    image: "/team_images/Taha.jpeg",
+    alt: "Jionex",
+    description: null,
+    position: "Full Stack Engineer",
+  },
+  {
+    id: 8,
+    name: "Omar Chihadeh",
+    image: "/team_images/omar-chihadeh.png",
+    alt: "Jionex",
+    description: null,
+    position: "Full Stack Engineer",
+  },
+  {
+    id: 9,
+    name: "Maptaul",
+    image: "/team_images/m3.png",
+    alt: "Jionex",
+    description: null,
+    position: "Medium Frontend & Backend Developer",
+  },
+];
