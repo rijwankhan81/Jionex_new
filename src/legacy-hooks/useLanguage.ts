@@ -1,9 +1,9 @@
-// hooks/useLanguage.ts
 import { useState, useEffect } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "react-i18next";
 
 const useLanguage = () => {
   const { i18n } = useTranslation("common");
+
   const [language, setLanguage] = useState(i18n.language);
 
   useEffect(() => {
